@@ -1,0 +1,298 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+.rnav button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  /* margin-right: 5px; */
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.rnav button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+/* CHATGPT NAV */
+
+/* Reset some default styles and provide a basic styling */
+
+/* Style the navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightslategray;
+  padding: 10px;
+  color: #fff;
+}
+
+.lnav {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.lnav span {
+  color: black;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.centernav ul {
+  list-style: none;
+  display: flex;
+}
+
+.centernav li {
+  margin-right: 20px;
+}
+
+.centernav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+.rnav {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  padding: 0.5rem 0.9rem;
+  margin-right: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+.close-button{
+  display: none;
+}
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .centernav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .close-button {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: 700;
+    background:transparent;
+  }
+  .centernav.active {
+    display: flex;
+    z-index: 100;
+  }
+
+  .centernav ul {
+    flex-direction: column;
+  }
+
+  .centernav li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .rnav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .search {
+    margin: 10px 0;
+  }
+}
+
+/* MY NAVBAR */
+
+/* .navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: black;
+  background-color: white;
+  padding: 1rem 0rem;
+}
+.centernav{
+}
+.centernav ul{
+  display: flex;
+  gap:30px;
+}
+ul li a{
+  text-decoration: none;
+  color: black;
+}
+li{
+  list-style: none;
+}
+.rnav .search{
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+} */
+
+/*  */
+
+/* krathi movie style css */
+#container{
+  height: max-content;
+  background-color:cornflowerblue;
+}
+.main-movie{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+  background-color:blanchedalmond;
+  position:relative;
+  overflow: hidden;
+}
+
+
+.movie img{
+  width:100%;
+}
+
+.movie-info{
+  color:black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info span{
+  background-color:lightcyan;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green{
+  color:lightgreen;
+}
+
+.movie-info span.orange{
+  color:orange;
+}
+
+.movie-info span.red{
+  color:red;
+}
+
+.overview{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: #fff;
+  padding: 1rem;
+  max-height: 100%;
+  transform:translateY(101%);
+  transition:transform 0.5s ease-in;
+}
+
+.movie:hover .overview{
+  transform:translateY(0)
+}
+
+
+
+/* SWIPER JS NAVIGATION */
+.container-swipe{
+  padding: 2rem 2rem;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 10px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-content img {
+  /* width: 100px; */
+  height: 35vh;
+  object-fit: cover;
+}
+.swiper-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* END SWIPER */
+
+/* .container-swipe{
+  height: max-content;
+  width: 100%;
+  position: relative;
+} */
+.banner{
+  overflow: hidden;
+ 
+}
+.inbanner{
+  padding: 1rem 5rem;
+  background-image: url('https://rukminim2.flixcart.com/image/850/1000/jcc9ci80/poster/n/a/e/medium-pl-wthe-conjuring-movie-wide-wall-poster-19-13-inches-original-imaetdv7zpzfhddg.jpeg?q=20');
+  /* background-position: center; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80vh;
+}

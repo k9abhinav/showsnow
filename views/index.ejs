@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+  <div class="all">
+    <%- include('../components/navbar.ejs') %>
+    <div id="container">
+      <h1>New Movies</h1>
+      <a href="/details"><div class="main-movie" ></div></a>
+    </div>
+    </div>
+    <section class="banner">
+      <div class="inbanner">
+        <h1></h1>
+      </div>
+    </section>
+    <div class="container-swipe">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+    </div>
+    <%- include('../components/footer.ejs') %>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/javascripts/swiper.js"></script>
+    <script src="/javascripts/moviedata.js"></script>
+</body>
+
+</html>
