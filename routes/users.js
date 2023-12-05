@@ -1,9 +1,9 @@
-
+require("dotenv").config();
 const { response } = require("express");
 const mongoose = require("mongoose");
 const plm =require("passport-local-mongoose")
 
-mongoose.connect("mongodb://localhost:27017/project").then((response)=>{
+mongoose.connect(process.env.URL).then((response)=>{
   console.log("Connected to database")
 })
 .catch((error)=>{
