@@ -1,8 +1,17 @@
 var swiper = new Swiper(".mySwiper", {
+  
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  slidesPerView: 3,
+  grabcursor:true,
+  slidesPerView: 1,
   spaceBetween: 10,
+  breakpoints: {
+    768: {
+        slidesPerView: 3,
+    },
+    600: {
+      slidesPerView:2 ,
+  }},
 });

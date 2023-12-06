@@ -154,10 +154,10 @@ a {
   }
 
   .hamburger div {
-    width: 40px;
-    height: 8px;
+    width: 35px;
+    height: 7px;
     background-color: #fff;
-    margin: 6px 0;
+    margin: 2px 0;
     transition: 0.4s;
     border-radius: 2px;
   }
@@ -267,12 +267,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem 0rem;
 }
 
 .swiper-content img {
-  /* width: 100px; */
-  height: 35vh;
+  width: 100%;
+  height: 50vh;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .swiper-content {
@@ -280,6 +282,11 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: max-content;
+}
+.swiper-head{
+  text-align: center;
 }
 
 /* END SWIPER */
@@ -296,8 +303,9 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   /* width: 100%; */
-  height: 80vh;
+  height: 85vh;
   opacity: 1;
+  position: relative;
 }
 @media (max-width:768px){
   .inbanner{
@@ -318,15 +326,60 @@ a {
   border-radius: 12px;
   text-shadow: 1px 1px 1px #000, 
                3px 3px 5px blue;
+               z-index: 10;
 }
 .inbanner h1{
   position: absolute;
   left: 9%;
-  top: 36%;
+  top: 26%;
   font-size: xx-large;
 }
 .inbanner h5{
   position: absolute;
   left: 10%;
-  top: 46%;
+  top: 36%;
+}
+
+
+
+/* FOOTER */
+
+.container-footer {
+  background-color: #7dd87d;
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width:768px) {
+  .container-footer{
+    flex-direction: column;
+  }
+  
+}
+.ff {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.ff img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.down-content-footer {
+  margin-top: 10px;
+}
+
+.heading-footer {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.content-footer {
+  font-size: 0.9em;
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>HOME | SHOWS NOW</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -15,13 +15,8 @@
 
   <div class="all">
     <%- include('../components/navbar.ejs') %>
-      <section class="banner">
-        <div class="inbanner">
-          <h1>Coming SOON!</h1>
-          <h5>In Theateres!</h5>
-        </div>
-      </section>
       <div class="container-swipe">
+        <h1 class="swiper-head">RECOMENDED MOVIES</h1>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
           </div>
@@ -29,6 +24,12 @@
           <div class="swiper-button-prev"></div>
         </div>
       </div>
+      <section class="banner">
+        <div class="inbanner">
+          <h1>Coming SOON!</h1>
+          <h5>In Theateres!</h5>
+        </div>
+      </section>
       <div id="container">
         <h1>New Movies</h1>
         <a href="/details">
