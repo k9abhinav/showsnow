@@ -46,7 +46,7 @@ function showMovies(data) {
                 <h3>${title}</h3>
                 ${vote_count}k Votes
                 <br/> 
-                <button class="know-more" id="${id}">Book Tickets</button
+                <a href="/payments"><button class="know-more" id="${id}">Know More</button</a>
             </div>
             
         
@@ -102,19 +102,15 @@ function swiperMovies(data) {
     movieElement.innerHTML = `
         <div class="swiper-content">
         <img src="${imageURL + poster_path}" id="${id}" >
-        <div class="star-pos">
-          <span class="fa fa-star checked">
-          </span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-        </div>
-        <div class="details">
+        
+        <div class="details-swiper">
         
           <h1>${title}</h1>
-          <h5>${vote_average}</h5>
+          <span class="${getColor(
+            vote_average
+          )}">${vote_average}</span> 
           <h3>${vote_count}k Reviews</h3>
+          <a href="/payments"><button class="know-more-swiper" id="${id}">Know More</button</a>
         
         </div>
         
@@ -124,3 +120,12 @@ function swiperMovies(data) {
     manymovies.appendChild(movieElement);
   });
 }
+
+{/* <div class="star-pos">
+          <span class="fa fa-star checked">
+          </span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+        </div> */}
