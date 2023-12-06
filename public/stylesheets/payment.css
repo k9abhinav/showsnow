@@ -1,3 +1,6 @@
+body{
+  width: 100%;
+}
 .finished{
     display: flex;
     align-items: center;
