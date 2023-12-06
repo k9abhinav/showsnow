@@ -113,8 +113,7 @@ function swiperMovies(data) {
         <div class="details">
         
           <h1>${title}</h1>
-          <h3>${vote_count}</h3>
-          <p>${overview}</p>
+          <h3>${vote_count}k Reviews</h3>
         
         </div>
         
