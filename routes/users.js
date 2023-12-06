@@ -3,7 +3,7 @@ const { response } = require("express");
 const mongoose = require("mongoose");
 const plm =require("passport-local-mongoose")
 
-mongoose.connect('process.env.URL').then((response)=>{
+mongoose.connect(process.env.URL).then((response)=>{
   console.log("Connected to database")
 })
 .catch((error)=>{
