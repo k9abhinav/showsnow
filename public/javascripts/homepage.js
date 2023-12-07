@@ -11,3 +11,22 @@ gsap.from(".inbanner h1, .inbanner h5", {
       smooth: true
     });
   });
+  
+  
+  // var currentIndex = 0;
+
+  //   function prevBtn() {
+  //     currentIndex = (currentIndex - 1 + 4) % 4;
+  //     updateCarousel();
+  //   }
+
+  //   function nextBtn() {
+  //     currentIndex = (currentIndex + 1) % 4;
+  //     updateCarousel();
+  //   }
+
+  //   function updateCarousel() {
+  //     const carouselInner = document.querySelector('.carousel-inner');
+  //     const translateValue = -currentIndex * 100;
+  //     carouselInner.style.transform = `translateX(${translateValue}%)`;
+  //   }

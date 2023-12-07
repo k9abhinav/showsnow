@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SHOWS NOW</title>
+  <title>Shows Now - Movie Ticket Booking</title>
   <link rel="stylesheet" href="/stylesheets/homepage.css">
 </head>
+
 <body>
-  <div class="homepage">
-    HOMEPAGE
-  </div>
+
+  <header class="nav">
+    <div class="logo">Shows Now</div>
+  </header>
+
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Watch Movies Anytime, Anywhere.</h1>
+      <p>Book your tickets now!</p>
+    </div>
+  </section>
+  <section class="about">
+    <div class="about-content">
+      <h2>About Shows Now</h2>
+      <p>Welcome to Shows Now, your go-to platform for booking movie tickets seamlessly. Discover the latest movies,
+        explore showtimes, and book your tickets with ease. Enjoy a hassle-free movie experience with Shows Now.</p>
+    </div>
+  </section>
+  <section class="movie-container">
+    <!-- Movie Cards will be dynamically added here -->
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2023 Shows Now - All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Sample movie data
+    const movies = [
+      { title: "Movie 1", description: "Description of Movie 1", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { title: "Movie 2", description: "Description of Movie 2", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      // Add more movie data as needed
+    ];
+
+    // Function to create a movie card element
+    function createMovieCard(movie) {
+      const movieCard = document.createElement("div");
+      movieCard.classList.add("movie-card");
+
+      const image = document.createElement("img");
+      image.src = movie.image;
+      image.alt = movie.title;
+
+      const movieInfo = document.createElement("div");
+      movieInfo.classList.add("movie-info");
+      movieInfo.innerHTML = `<h3>${movie.title}</h3><p>${movie.description}</p>`;
+
+      movieCard.appendChild(image);
+      movieCard.appendChild(movieInfo);
+
+      return movieCard;
+    }
+
+    // Get the movie container element
+    const movieContainer = document.querySelector(".movie-container");
+
+    // Dynamically create movie cards and append them to the container
+    movies.forEach((movie) => {
+      const movieCard = createMovieCard(movie);
+      movieContainer.appendChild(movieCard);
+    });
+  </script>
+
 </body>
+
 </html>

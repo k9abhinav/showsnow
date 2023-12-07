@@ -1,9 +1,86 @@
-*{
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+body {
+    font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
-}
-.homepage{
-    height: 100vh;
+    background-color: #111;
+    color: #fff;
+  }
+  
+  .nav {
+    background-color: #111;
+    padding: 1rem;
+    text-align: center;
+    color: #e50914;
+  }
+  
+  .banner {
+    background-image: url("banner.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    text-align: center;
+    padding: 70px 0;
+  }
+  
+  .banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+  }
+  
+  .movie-card {
+    width: 200px;
+    margin: 1rem;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-card img {
     width: 100%;
-    background-color: bisque;
-}
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .movie-info {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .footer {
+    background-color: #111;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .about {
+    background-color: #222;
+    padding: 2rem;
+    color: #fff;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+/* Media Queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+    .movie-card {
+      width: 100%;
+    }
+  }  
