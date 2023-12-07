@@ -120,12 +120,3 @@ function swiperMovies(data) {
     manymovies.appendChild(movieElement);
   });
 }
-
-{/* <div class="star-pos">
-          <span class="fa fa-star checked">
-          </span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-        </div> */}

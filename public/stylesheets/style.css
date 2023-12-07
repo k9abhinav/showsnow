@@ -78,6 +78,13 @@ a {
   padding: 5px;
   border-radius: 5px;
 }
+@media (max-width:768px){
+  .centernav a{
+    color: white;
+    font-weight: 700;
+    font-size: 35px;
+  }
+}
 .centernav a:hover{
   /* background-color: #5b446aa3; */
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -132,6 +139,7 @@ a {
     cursor: pointer;
     font-weight: 700;
     background: transparent;
+    font-size: 35px;
   }
 
   .centernav.active {
@@ -248,7 +256,9 @@ a {
   transition: transform 0.5s ease-in;
   color: #fff;
 }
-
+.overview h3{
+  margin: 10px;
+}
 .movie:hover .overview {
   transform: translateY(0)
 }

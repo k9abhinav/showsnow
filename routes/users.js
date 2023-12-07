@@ -8,6 +8,7 @@ mongoose.connect(process.env.URL).then((response)=>{
 })
 .catch((error)=>{
   console.log(error)
+  // alert(error)
   console.log("Not connected to the database")
 })
 

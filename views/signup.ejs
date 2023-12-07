@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGN UP</title>
+    
+    <!-- <link rel="stylesheet" href="/stylesheets/style.css"> -->
     <link rel="stylesheet" href="/stylesheets/signin.css">
+    <script src="/javascripts/navbar.js"></script>
+
 </head>
+
 <body>
-    <form action="/register" method="post">
-        <!-- <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required> -->
-        <h1>CREATE A NEW ACCOUNT</h1>
-      
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-      
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <label for="secret">Secret:</label>
-        <input type="text" id="secret" name="secret" required>
-      
-      
-        <button type="submit">REGISTER</button>
-      </form>
+    <%- include('../components/navbar.ejs') %>
+     <div class="main-all">
+        <div class="container">
+            <div class="content-contenaire">
+              <div class="top-container">
+                <img src="/images/copyshow.png">
+                <h2> REGISTER WITH A NEW ACCOUNT </h2>
+                <p> Already a user? <a href="/signin">Login!</a></p> 
+              </div>
+              <form>
+              <div class="input" action="/register" method="post">      
+                <input type="text" placeholder= "Username" id="username" name="username" required>
+                <input type="password"   placeholder="Password" id="password" name="password" required>
+                <input type="password" id="secret" name="secret" placeholder="Secret" required>
+              </div>
+              <input type="submit" value="REGISTER">     
+              </form> 
+            </div>
+            <div class="img-container" style="background-image: url('https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">  
+              <div class="toronto-logo">
+                <div class="toronto">
+                  <!-- <img src="/images/copyshow.png">       -->
+                </div>
+                <div class="welcome">
+                  <!-- <p>Book all your shows on SHOWS NOW!</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+     </div>
 </body>
+
 </html>
