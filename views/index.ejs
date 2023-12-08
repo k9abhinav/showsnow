@@ -16,9 +16,13 @@
 
   <section class="banner">
     <div class="banner-content">
-      <h1>Watch Movies Anytime, Anywhere.</h1>
+      <h1>Watch Movies Shows, Events.</h1>
       <p>Book your tickets now!</p>
     </div>
+  </section>
+  
+  <section class="movie-container">
+    <!-- Movie Cards will be dynamically added here -->
   </section>
   <section class="about">
     <div class="about-content">
@@ -27,10 +31,6 @@
         explore showtimes, and book your tickets with ease. Enjoy a hassle-free movie experience with Shows Now.</p>
     </div>
   </section>
-  <section class="movie-container">
-    <!-- Movie Cards will be dynamically added here -->
-  </section>
-
   <footer class="footer">
     <p>&copy; 2023 Shows Now - All rights reserved.</p>
   </footer>
@@ -38,8 +38,10 @@
   <script>
     // Sample movie data
     const movies = [
-      { title: "Movie 1", description: "Description of Movie 1", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { title: "Movie 2", description: "Description of Movie 2", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { title: "Movies", description: "Description of Movie 1", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" , href:"/movies" },
+      { title: "Shows", description: "Description of Movie 2", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" , href:"/movies" },
+      { title: "Events", description: "Description of Movie 1", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" ,href:"/movies"},
+      { title: "And Manymore", description: "Description of Movie 1", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" ,href:"/m" },
       // Add more movie data as needed
     ];
 
@@ -54,7 +56,7 @@
 
       const movieInfo = document.createElement("div");
       movieInfo.classList.add("movie-info");
-      movieInfo.innerHTML = `<h3>${movie.title}</h3><p>${movie.description}</p>`;
+      movieInfo.innerHTML = `<h3>${movie.title}</h3><p>${movie.description}</p><a href="#" class="custom-button">Click me</a>`;
 
       movieCard.appendChild(image);
       movieCard.appendChild(movieInfo);
