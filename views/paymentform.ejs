@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHows Now - Payment Details</title>
+    <link rel="stylesheet" href="/stylesheets/paymentform.css">
+</head>
+<body>
+    <header class="nav">
+        <section class="logo">Shows Now</section>
+      </header>
+    
+<div>
+    <h1>Payment Details</h1>
+    <p>Please provide the following information to complete your booking:</p>
+    
+    <form action="/paymentsummary" method="POST" id="paymentForm">
+        <label for="session">Select Session:</label>
+        <select name="session" id="session" required>
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+            <option value="night">Night</option>
+        </select>
+
+        <label for="timing">Select Timing:</label>
+        <!-- Add timing options based on the selected session -->
+        <!-- You may populate this dynamically using JavaScript or fetch from a server -->
+
+        <label for="paymentMethod">Select Payment Method:</label>
+        <select name="paymentMethod" id="paymentMethod" required>
+            <option value="upi">UPI</option>
+            <option value="netbanking">Netbanking</option>
+            <option value="creditCard">Credit Card</option>
+            <!-- Add other payment options as needed -->
+        </select>
+
+        <!-- Add other general details required for booking -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Add more fields as needed -->
+
+        <button type="submit">Proceed to Payment</button>
+    </form>
+</div>
+
+<!-- Add your scripts here, if needed -->
+
+</body>
+</html>

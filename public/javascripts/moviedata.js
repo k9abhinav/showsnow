@@ -46,7 +46,7 @@ function showMovies(data) {
                 <h3>${title}</h3>
                 ${vote_count}k Votes
                 <br/> 
-                <a href="/payments"><button class="know-more" id="${id}">Know More</button</a>
+                <a href="/paymentform"><button class="know-more" id="${id}">Know More</button</a>
             </div>
             
         
@@ -110,7 +110,7 @@ function swiperMovies(data) {
             vote_average
           )}">${vote_average}</span> 
           <h3>${vote_count}k Reviews</h3>
-          <a href="/payments"><button class="know-more-swiper" id="${id}">Know More</button</a>
+          <a href="/paymentform"><button class="know-more-swiper" id="${id}">Know More</button</a>
         
         </div>
         

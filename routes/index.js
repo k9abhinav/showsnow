@@ -26,7 +26,13 @@ router.get('/signup', function(req, res) {
 router.get('/profile', isLoggedIn,function(req, res) {
   res.render('profile')
 });
-router.get('/payments', function(req, res) {
+router.post ('/paymentsummary',function(req,res){
+  res.render('paymentsummary');
+})
+router.get ('/paymentform',function(req,res){
+  res.render('paymentform');
+})
+router.get('/payment-success', function(req, res) {
   res.render('paymentdone');
 });
 router.get('/details', function(req, res) {

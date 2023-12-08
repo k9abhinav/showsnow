@@ -53,7 +53,7 @@ function showDetails(datas) {
                         2h 45m Action, Thriller
                     </div>
                     <div class="bookticket">
-                        <button class="btn">Book Tickets</button>
+                        <a href="/paymentform"><button class="btn">Book Tickets</button></a>
                     </div>
                 </div>
             </div>
@@ -206,6 +206,6 @@ function getColor(vote) {
         <p>${overview}</p>
         <span class="released">Released on ${release_date}</span>
         <br/>
-        <button class="booking">Book Tickets</button>
+        <a href="/paymentdone"><button class="booking">Book Tickets</button></a>
         </div> */
 }

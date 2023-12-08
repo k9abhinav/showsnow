@@ -14,7 +14,9 @@
 </head>
 
 <body>
-
+  <div id="loading-overlay">
+    <div class="loader"></div>
+</div>
   <div class="all">
     <%- include('../components/navbar.ejs') %>
     <div id="container">
@@ -44,6 +46,16 @@
   </div>
   <%- include('../components/footer.ejs') %>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Simulate API data loading time (replace this with your actual data loading logic)
+      setTimeout(() => {
+          // Remove the loading overlay
+          document.getElementById("loading-overlay").style.display = "none";
+      }, 3000); // Adjust the timeout based on your actual loading time
+  });
+  
+  </script>
   
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.5/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

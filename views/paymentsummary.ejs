@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking - Payment Summary</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            color: #3498db;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .summary {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .summary-item {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .payment-methods {
+            margin-bottom: 20px;
+        }
+
+        .payment-method {
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .payment-method img {
+            width: 40px;
+        }
+
+        .payment-method:hover {
+            transform: scale(1.1);
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #217dbb;
+        }
+
+        .taxes {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .tax-item {
+            margin-bottom: 10px;
+        }
+
+        .total-amount {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                max-width: 100%;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Payment Summary</h1>
+
+    <div class="summary">
+        <div class="summary-item">
+            <strong>Movie:</strong> Avengers: Endgame
+        </div>
+        <div class="summary-item">
+            <strong>Date:</strong> December 15, 2023
+        </div>
+        <div class="summary-item">
+            <strong>Session:</strong> Evening
+        </div>
+        <div class="summary-item">
+            <strong>Seats:</strong> 2
+        </div>
+    </div>
+
+    <div class="payment-methods">
+        <p>Select Payment Method:</p>
+        <div class="payment-method"> <img src="credit-card-icon.png" alt="Credit Card"> </div>
+        <div class="payment-method"> <img src="paypal-icon.png" alt="PayPal"> </div>
+        <!-- Add more payment methods as needed -->
+    </div>
+
+    <div class="taxes">
+        <div class="tax-item">
+            <strong>Subtotal:</strong> $20.00
+        </div>
+        <div class="tax-item">
+            <strong>CGST (9%):</strong> $1.80
+        </div>
+        <div class="tax-item">
+            <strong>SGST (9%):</strong> $1.80
+        </div>
+        <div class="tax-item">
+            <strong>GST (18%):</strong> $3.60
+        </div>
+    </div>
+
+    <div class="total-amount">
+        <strong>Total Amount:</strong> $27.20
+    </div>
+
+    <a href="/payment-success"><button onclick="confirmPayment()">Confirm Payment</button></a>
+</div>
+
+<script>
+    function confirmPayment() {
+        // Add logic to handle payment confirmation, e.g., redirect to payment gateway or show a success message
+        alert('Payment confirmed!'); // Placeholder, replace with actual logic
+    }
+</script>
+
+</body>
+</html>
