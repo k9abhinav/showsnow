@@ -9,7 +9,9 @@
     <!-- <link rel="stylesheet" href="/stylesheets/style.css"> -->
     <link rel="stylesheet" href="/stylesheets/signin.css">
     <script src="/javascripts/navbar.js"></script>
-
+    
+    <link rel="stylesheet" href="/stylesheets/navbar.css">
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
 </head>
 
 <body>
@@ -22,8 +24,9 @@
                 <h2> REGISTER WITH A NEW ACCOUNT </h2>
                 <p> Already a user? <a href="/signin">Login!</a></p> 
               </div>
-              <form>
-              <div class="input" action="/register" method="post">      
+              <form action="/register" method="POST" class="animate-form">
+              <div class="input" >
+                <input type="text" placeholder= "Full Name" id="fullname" name="fullname" required>      
                 <input type="text" placeholder= "Username" id="username" name="username" required>
                 <input type="password"   placeholder="Password" id="password" name="password" required>
                 <input type="password" id="secret" name="secret" placeholder="Secret" required>
@@ -43,6 +46,16 @@
             </div>
           </div>
      </div>
+     <script>
+      // GSAP Animation
+      gsap.to(".animate-form", {
+        opacity: 1,
+        translateY: 0,
+        duration: 1,
+        ease: "power2.inOut",
+        delay: 0.5
+      });
+    </script>
 </body>
 
 </html>

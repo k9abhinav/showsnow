@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+.page-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+/* Reset some default button styles */
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Style for the logout button */
+.logout-btn{
+    background-color: #ff3333; /* Red color for the button */
+    color: #fff; /* White text color */
+    padding: 10px 15px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+
+    /* Optional: Add box shadow for a subtle depth effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 6%;
+    top: 16%;
+}
+
+/* Hover effect */
+.logout-btn:hover {
+    background-color: #cc0000; /* Darker red color on hover */
+}
+
+.profile-container {
+    min-height: 100vh;
+    min-width: 100vw;
+    background: linear-gradient(to right bottom,
+            rgba(blue, 0.5),
+            rgba(green, 0.5));
+    background-image: url("https://images.unsplash.com/photo-1489846986031-7cea03ab8fd0?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+#header {
+    width: 50vw;
+    max-width: 400px;
+    min-width: 300px;
+    height: 150px;
+    background: url('https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center center;
+    transition: all 0.08s linear;
+}
+
+#profile {
+    width: 50vw;
+    max-width: 400px;
+    min-width: 300px;
+    height: 160px;
+    background: white;
+    position: relative;
+    box-sizing: border-box;
+    /* padding-top: 40px;
+    padding-left: 25px; */
+    padding: 2rem;
+  font-family: 'Ubuntu', sans-serif;
+    
+
+    .image {
+        position: absolute;
+        border: 3px solid white;
+        top: -55px;
+        left: 20px;
+        height: 80px;
+        width: 80px;
+        border-radius: 10px;
+
+        img {
+            width: inherit;
+            height: inherit;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+    }
+
+    .name {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #444;
+    }
+
+    .nickname {
+        color: #888;
+        font-size: 0.9rem;
+        padding-bottom: 7px;
+    }
+
+    .location {
+        color: #555;
+        font-size: 0.9rem;
+        padding-left: 0px;
+        position: relative;
+        left: -5px;
+
+        .material-icons {
+            position: relative;
+            top: 3px;
+            font-size: 1rem;
+        }
+    }
+}
+
+.shadow {
+    box-shadow: 0px 0px 10px 1px rgba(black, 0.5);
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.following,
+.followers {
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #bbb;
+    font-weight: 300;
+}
+
+.followers {
+    float: right;
+    padding-right: 30px;
+}
+
+.bottom {
+    margin-top: 10px;
+}
+
+.count {
+    color: black;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+
+/* NAVBAR */
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.rnav button {
+    background-color: #4c9173;
+    margin: 5px;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.rnav button:hover {
+    background-color: #5b446a;
+}
+
+
+/* Style the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #7dd87d;
+    padding: 10px;
+    color: #000;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.lnav {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-family: 'Style Script', cursive;
+    letter-spacing: 5px;
+}
+
+/* .logo-top{
+    width: 56px;
+  } */
+.lnav span {
+    color: black;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.centernav ul {
+    list-style: none;
+    display: flex;
+}
+
+.centernav li {
+    margin-right: 20px;
+}
+
+.centernav a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@media (max-width:768px) {
+    .centernav a {
+        color: white;
+        font-weight: 700;
+        font-size: 35px;
+    }
+}
+
+.centernav a:hover {
+    /* background-color: #5b446aa3; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: whitesmoke;
+}
+
+.rnav {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    padding: 0.5rem 0.9rem;
+    margin-right: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    font-family: inherit;
+}
+
+.close-button {
+    display: none;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .centernav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .close-button {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-weight: 700;
+        background: transparent;
+        font-size: 35px;
+    }
+
+    .centernav.active {
+        display: flex;
+        z-index: 100;
+    }
+
+    .centernav ul {
+        flex-direction: column;
+    }
+
+    .centernav li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute;
+        right: 22px;
+        top: 19px;
+    }
+
+    .hamburger div {
+        width: 35px;
+        height: 7px;
+        background-color: #fff;
+        margin: 2px 0;
+        transition: 0.4s;
+        border-radius: 2px;
+    }
+
+    .rnav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search {
+        margin: 10px 0;
+    }
+}
+.rnav{
+    display: none;
+}

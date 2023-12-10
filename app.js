@@ -16,7 +16,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.use(flash());
 //
 
 app.use(session({
@@ -28,7 +28,7 @@ app.use(passport.initialize());
 app.use(passport.session())
 passport.serializeUser(usersRouter.serializeUser())
 passport.deserializeUser(usersRouter.deserializeUser())
-app.use(flash());
+
 
 //
 app.use(logger('dev'));

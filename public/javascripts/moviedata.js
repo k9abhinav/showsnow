@@ -8,11 +8,13 @@ const baseURL = "https://api.themoviedb.org/3";
 const APIURL = baseURL + "/discover/movie?sort_by=popularity.desc&" + APIKEY;
 const imageURL = "https://image.tmdb.org/t/p/w500";
 const searchURL = baseURL + "/search/movie?" + APIKEY;
+const trendingURL = baseURL+"/trending/all/day?language=en-US&"+APIKEY;
+const upcomingURL =baseURL+"/movie/upcoming?language=en-US&page=1&"+APIKEY;
 
 const search = document.querySelector(".search");
 const form = document.querySelector(".form");
 
-getMovies(APIURL);
+getMovies(upcomingURL);
 
 function getMovies(url) {
   fetch(url)
@@ -31,7 +33,7 @@ function showMovies(data) {
   movielist.innerHTML = "";
 
   data.forEach((movie) => {
-    const { title, poster_path, vote_average, id, vote_count } = movie;
+    const { title, poster_path, vote_average, id, vote_count,overview } = movie;
     const movieEl = document.createElement("div");
     movieEl.classList.add("movie");
     movieEl.innerHTML = `
@@ -40,13 +42,15 @@ function showMovies(data) {
                 <h3>${title}</h3>
                 <span class="${getColor(
                   vote_average
-                )}">${vote_average}</span>          
+                )}">${vote_average.toFixed(1)}</span>          
             </div>
             <div class="overview">
                 <h3>${title}</h3>
-                ${vote_count}k Votes
-                <br/> 
-                <a href="/paymentform"><button class="know-more" id="${id}">Know More</button</a>
+                <h4>${vote_count}k Votes</h4>
+                <br>
+                <p>${overview}</p> 
+                <br>
+                <a href="/paymentform"><button class="know-more" id="${id}">Book Now</button</a>
             </div>
             
         
@@ -77,7 +81,7 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-getSwiperMovies(APIURL);
+getSwiperMovies(trendingURL);
 
 function getSwiperMovies(url) {
   fetch(url)
@@ -108,7 +112,7 @@ function swiperMovies(data) {
           <h1>${title}</h1>
           <span class="${getColor(
             vote_average
-          )}">${vote_average}</span> 
+          )}">${vote_average.toFixed(1)}</span> 
           <h3>${vote_count}k Reviews</h3>
           <a href="/paymentform"><button class="know-more-swiper" id="${id}">Know More</button</a>
         

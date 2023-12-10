@@ -10,29 +10,29 @@
 }
 
 .img1 img {
-    width: 200px;
-    height: 100%;
+    width: auto;
+    height: 362px;
     border-radius: 20px;
 }
 
 .img1 {
     position: relative;
-    width: 250px;
-    height: 280px;
-    margin-left: 100px;
-    margin-top: 70px;
-    margin-right: 20px;
+    
+    padding: 80px;
 }
 
 .content {
     color: white;
+    padding: 1rem;
 }
 
 .up-content {
     align-items: center;
     display: flex;
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
+    align-items: center;
+    padding: 1rem;
 }
 
 .container {
@@ -44,9 +44,7 @@
     background-color: rgb(15, 12, 28);
 }
 
-p {
-    margin-top: 20px;
-}
+
 
 hr {
     margin-top: 20px;
@@ -65,7 +63,7 @@ hr {
 }
 
 .heading2 {
-    margin-top: 20px;
+    padding-bottom: 20px;
 }
 
 .names,
@@ -83,8 +81,11 @@ hr {
 }
 
 .down-content {
-    margin-left: 30px;
-    margin-right: 430px;
+   padding: 2rem;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
 }
 
 .cast,
@@ -131,75 +132,14 @@ hr {
 }
 
 @media only screen and (max-width: 768px) {
-    .img1 {
-        width: 150px;
-        height: 180px;
-        margin-left: 50px;
-        margin-top: 40px;
-        margin-right: 10px;
+    .up-content{
+        flex-direction: column;
     }
 
-    .down-content {
-        margin-right: 30px;
-    }
-
-    .cimage {
-        width: 80%;
-    }
-
-    .leotag {
-        z-index: 0;
-    }
-
-    .content,
-    .img1 {
-        margin-top: 70px;
-        z-index: 1;
-    }
-
-    .img1 img {
-        width: 200px;
-    }
-
-    .content {
-        text-align: center;
-    }
+    
 }
 
-@media only screen and (max-width: 480px) {
-    .img1 {
-        width: 120px;
-        height: 140px;
-        margin-left: 20px;
-        margin-top: 30px;
-        margin-right: 5px;
-    }
 
-    .down-content {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .cimage {
-        width: 100%;
-    }
-
-    .leotag {
-        z-index: 0;
-    }
-
-    .content,
-    .img1 {
-        margin-top: 70px;
-        z-index: 1;
-        text-align: center;
-    }
-
-    .img1 img {
-        height: 200px;
-        margin-top: 6px;
-    }
-}
 
 /* LISHA */
 
