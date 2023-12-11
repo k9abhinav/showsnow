@@ -11,42 +11,59 @@
   <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
   <link rel="stylesheet" href="/stylesheets/details.css">
   <link rel="stylesheet" href="/stylesheets/navbar.css">
-  
-  
+  <link rel="stylesheet" href="/stylesheets/footer.css">
+  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
 </head>
 
 <body>
   <div id="loading-overlay">
     <div class="loader"></div>
 </div>
+
   <div class="all">
     <%- include('../components/navbar.ejs') %>
+    <div class="container-swipe">
+      <h1 class="swiper-head"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/fire-element--v1.png" alt="fire-element--v1"/>TRENDING...</h1>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+   
+    <div id="video-future">
+      <video src="/images/Napolean.mp4" autoplay muted></video>
+      <div id="ftext">
+        <h1>Napolean 2023 is out now!</h1>
+        <button>Watch Trailer</button>
+      </div>
+    </div>
     <div id="container">
       <h1><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/ratings.png" alt="ratings"/> UPCOMING MOVIES</h1>
      
         <div class="main-movie"></div>
     </div>
-
-      <div class="container-swipe">
-        <h1 class="swiper-head"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/fire-element--v1.png" alt="fire-element--v1"/>TRENDING...</h1>
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </div>
-      <section class="banner">
-        <div class="inbanner">
-          <h1>Coming SOON!</h1>
-          <h5>In Theateres!</h5>
-        </div>
-      </section>
-        </div>
+    <div class="pagination">
+      <div class="page" id="prev">Previous Page</div>
+      <div class="current" id="current">1</div>
+      <div class="page" id="next">Next Page</div>
 
   </div>
+      
+        </div>
+        
+  
+  
+  <!-- <section class="banner">
+    <div class="inbanner">
+      <h1><a href="/paymentform "><button class="know-more">Book Now</button></a></h1>
+      <h5>In Theateres!</h5>
+    </div>
+  </section> -->
+  
   <%- include('../components/footer.ejs') %>
-
+  <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       // Simulate API data loading time (replace this with your actual data loading logic)
@@ -63,6 +80,24 @@
     <script src="/javascripts/moviedata.js"></script>
     <script src="/javascripts/navbar.js"></script>
     <script src="/javascripts/homepage.js"></script>
+    <script>
+      document.querySelector('#ftext button')
+      .addEventListener('mouseover',function(){
+        gsap.to("#video-future video",{
+          opacity:1,
+          duration:0.9,
+          ease: Power4
+        })
+      })
+      document.querySelector('#ftext button')
+      .addEventListener('mouseleave',function(){
+        gsap.to("#video-future video",{
+          opacity:0,
+          duration:0.9,
+          ease: Power4
+        })
+      })
+    </script>
 </body>
 
 </html>

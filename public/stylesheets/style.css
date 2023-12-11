@@ -6,6 +6,9 @@ body {
   font-family: 'Ubuntu', sans-serif;
   box-sizing: border-box;
 }
+.all{
+  background-color: #111;
+}
 #loading-overlay {
   position: fixed;
   top: 0;
@@ -150,6 +153,7 @@ body {
 /* SWIPER JS NAVIGATION */
 .container-swipe {
   padding: 2rem 2rem;
+  background-color: #fff;
 }
 
 .swiper {
@@ -231,7 +235,36 @@ body {
   background-color:#5b446a;
   color: #fff;
 }
+.no-results{
+  color:white;
+}
 
+.pagination{
+  display:flex;
+  margin:10px 30px;
+  align-items: center;
+  justify-content: center;
+  color:#fff;
+  background-color: #111;
+}
+
+.page{
+  padding:20px;
+  cursor:pointer;
+}
+
+.page.disabled{
+  cursor:not-allowed;
+  color:grey;
+}
+
+.current{
+  padding: 10px 20px;
+  border-radius: 50%;
+  border: 5px solid orange;
+  font-size: 20px;
+  font-weight: 600;
+}
 /* END SWIPER */
 
 /* .container-swipe{
@@ -241,18 +274,18 @@ body {
 } */
 
 .inbanner {
-  background-image: url('../images/john.jpeg');
+  background-image: url('https://i.pinimg.com/originals/11/a7/dc/11a7dcaac50214155c3cc9180ab628f1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   /* width: 100%; */
-  height: 85vh;
+  height: 70vh;
   opacity: 1;
   position: relative;
 }
 @media (max-width:768px){
   .inbanner{
     
-    background-image: url('https://images.unsplash.com/photo-1635805737707-575885ab0820?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/457/871/663/movie-poster-wonder-woman-gal-gadot-portrait-display-wallpaper-preview.jpg');
   }
 }
 @media (max-width:425px){
@@ -286,46 +319,45 @@ body {
                z-index: 10;
 }
 
-
-
-/* FOOTER */
-
-.container-footer {
-  background-color: #7dd87d;
-  color: black;
-  padding: 20px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-@media (max-width:768px) {
-  .container-footer{
-    flex-direction: column;
-  }
-  
-}
-.ff {
-  margin-bottom: 20px;
+#video-future{
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+#video-future video{
+  width: 100%;
+  opacity: 0;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(1.4);
+}
+#ftext{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+  border-radius: 12px;
+  padding: 0.5rem;
+  color: #000;
+  /* background-color: #dadada; */
 }
 
-.ff img {
-  width: 56px;
-  height: 40px;
-  margin-right: 10px;
-}
-
-.down-content-footer {
+#ftext button{
+  padding: 0.8vw 1.7vw;
+  font-size: 0.6vw;
   margin-top: 10px;
-}
-
-.heading-footer {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.content-footer {
-  font-size: 0.9em;
+  font-weight: 700;
+  border-radius: 100px;
+  background-color: white;
+  border: 1px solid lightgray;
+  color: black;
 }
