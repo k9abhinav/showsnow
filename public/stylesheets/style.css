@@ -329,6 +329,12 @@ body {
   flex-direction: column;
   overflow: hidden;
   position: relative;
+  
+}
+@media (max-width:768px){
+  #video-future video{
+    object-fit: cover;
+  }
 }
 #video-future video{
   width: 100%;
@@ -346,14 +352,14 @@ body {
   position: relative;
   z-index: 999;
   border-radius: 12px;
-  padding: 0.5rem;
+  padding: 0.6rem;
   color: #000;
-  /* background-color: #dadada; */
 }
 
 #ftext button{
-  padding: 0.8vw 1.7vw;
-  font-size: 0.6vw;
+  font-family: inherit;
+  padding: 1.2vw 2vw;
+  font-size: 10px;
   margin-top: 10px;
   font-weight: 700;
   border-radius: 100px;
