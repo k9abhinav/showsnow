@@ -1,5 +1,5 @@
-require("dotenv").config();
-const { response } = require("express");
+// require("dotenv").config();
+// const { response } = require("express");
 const mongoose = require("mongoose");
 const plm =require("passport-local-mongoose")
 
@@ -15,7 +15,7 @@ const userSchema = mongoose.Schema({
   
   fullname:{
     type: String,
-
+    required:true,
   },
   username:{
     type: String,
@@ -24,11 +24,11 @@ const userSchema = mongoose.Schema({
   },
   password:{
     type: String,
-   
+    required:true,
      },
   secret:{
     type: String,
-   
+    required:true,
   },
   
 },{timestamps:true})

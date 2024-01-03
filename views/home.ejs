@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/stylesheets/navbar.css">
   <link rel="stylesheet" href="/stylesheets/footer.css">
   <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -22,23 +23,6 @@
 
   <div class="all">
     <%- include('../components/navbar.ejs') %>
-    <div class="container-swipe">
-      <h1 class="swiper-head"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/fire-element--v1.png" alt="fire-element--v1"/>TRENDING...</h1>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-    
-    <div id="video-future">
-      <video src="/images/Napolean.mp4" autoplay muted></video>
-      <div id="ftext">
-        <h1>Napolean 2023 is out now!</h1>
-        <button>Watch Trailer</button>
-      </div>
-    </div>
     <div id="container">
       <h1><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/ratings.png" alt="ratings"/> UPCOMING MOVIES</h1>
      
@@ -50,6 +34,24 @@
       <div class="page" id="next">Next Page</div>
 
   </div>
+    <div class="container-swipe">
+      <h1 class="swiper-head"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/fire-element--v1.png" alt="fire-element--v1"/>TRENDING...</h1>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+    
+    <div id="video-future">
+      <video src="/images/Napolean.mp4" autoplay muted loop></video>
+      <div id="ftext">
+        <h1>Napolean 2023 is out now!</h1>
+        <button>Watch Trailer</button>
+      </div>
+    </div>
+    
       
         </div>
         
@@ -83,6 +85,8 @@
     <script>
       document.querySelector('#ftext button')
       .addEventListener('mouseover',function(){
+        let napolean = document.querySelector('#ftext h1')
+        napolean.style.display = 'none'
         gsap.to("#video-future video",{
           opacity:1,
           duration:0.9,
@@ -91,6 +95,8 @@
       })
       document.querySelector('#ftext button')
       .addEventListener('mouseleave',function(){
+        let napolean = document.querySelector('#ftext h1')
+        napolean.style.display = 'block'
         gsap.to("#video-future video",{
           opacity:0,
           duration:0.9,

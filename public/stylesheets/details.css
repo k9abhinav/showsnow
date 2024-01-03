@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
-
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+  }
 .imgclass img {
     width: 900px;
     height: 380px;
@@ -41,7 +49,8 @@
 
 .imgclass {
     display: flex;
-    background-color: rgb(15, 12, 28);
+    /* background-color: rgb(15, 12, 28); */
+    background-color: #333333a7;
 }
 
 
@@ -62,9 +71,7 @@ hr {
     flex-direction: row;
 }
 
-.heading2 {
-    padding-bottom: 20px;
-}
+
 
 .names,
 .role {
@@ -80,12 +87,32 @@ hr {
     color: rgb(95, 89, 89);
 }
 
-.down-content {
+/* .down-content {
    padding: 2rem;
    display: flex;
    align-items: center;
    flex-direction: column;
    justify-content: center;
+} */
+.down-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    margin: 20px;
+}
+
+.heading2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .cast,

@@ -9,18 +9,28 @@
   <div class="centernav">
     <button class="close-button" onclick="toggleOverlay()">X</button>
     <ul>
-      <li><a href="/home">Home</a></li>
-      <li><a href="/shows">Top Rated</a></li>
-      <li><a href="/details">TV Shows</a></li>
-      <li><a href="/sports">Sports</a></li>
+      <li><a href="/home">Upcoming Movies</a></li>
+      <li><a href="/toprated">Top Rated Movies</a></li>
+      <li><a href="/popular">Popular Movies</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
   </div>
-  <div class="rnav">
+  <!-- <div class="rnav">
     <form class="form"><input type="search" name="" id="" placeholder="Search" class="search"></form>
     <a href="/login"><button>LOGIN</button></a>
     <a href="/register"><button>REGISTER</button></a>
  
     
+  </div> -->
+  <div class="rnav">
+    <form class="form"><input type="search" name="" id="" placeholder="Search" class="search"></form>
+    <div class="dropdown">
+      <button class="dropbtn">Account <i class="fas fa-chevron-down"></i></button>
+      <div class="dropdown-content">
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+      </div>
+    </div>
   </div>
   <div class="hamburger" onclick="toggleOverlay()">
     <div></div>

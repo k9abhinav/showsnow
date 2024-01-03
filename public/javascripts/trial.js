@@ -1,9 +1,11 @@
 const APIKEY = "api_key=0e7fb9630b7a8648f2250631b68d391d";
 const baseURL = "https://api.themoviedb.org/3";
 const imageURL = "https://image.tmdb.org/t/p/w500";
+const popularURL =baseURL+"/movie/popular?language=en-US&page=1&"+APIKEY;
+
 
 // Replace this with the specific movie ID you want to fetch
-const movieId = 9079;
+const movieId = 20759;
 
 const APIURL = `${baseURL}/movie/${movieId}?language=en-US&${APIKEY}`;
 

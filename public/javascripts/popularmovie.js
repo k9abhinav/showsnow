@@ -10,6 +10,7 @@ const imageURL = "https://image.tmdb.org/t/p/w500";
 const searchURL = baseURL + "/search/movie?" + APIKEY;
 const trendingURL = baseURL+"/trending/all/day?language=en-US&"+APIKEY;
 const upcomingURL =baseURL+"/movie/upcoming?language=en-US&page=1&"+APIKEY;
+const popularURL =baseURL+"/movie/popular?language=en-US&page=1&"+APIKEY;
 
 
 const search = document.querySelector(".search");
@@ -29,7 +30,7 @@ var totalPages = 100;
 
 
 
-getMovies(upcomingURL);
+getMovies(popularURL);
 
 function getMovies(url) {
   lastUrl = url
@@ -89,7 +90,7 @@ function showMovies(data) {
                 <br>
                 <p>${overview}</p> 
                 <br>
-                <a href="/paymentform"><button class="know-more" id="${id}">Book Now</button</a>
+                <a href="/book"><button class="know-more" id="${id}">Book Now</button</a>
             </div>
             
         

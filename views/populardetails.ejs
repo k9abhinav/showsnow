@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/navbar.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+</head>
+
+<body>
+    <%- include('../components/navbar.ejs') %>
+    <div id="container">
+        <h1><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/ratings.png" alt="ratings"/> UPCOMING MOVIES</h1>
+       
+          <div class="main-movie"></div>
+      </div>
+      <div class="pagination">
+        <div class="page" id="prev">Previous Page</div>
+        <div class="current" id="current">1</div>
+        <div class="page" id="next">Next Page</div>
+  
+    </div>   
+        
+    
+    <%- include('../components/footer.ejs') %>
+        <script src="/javascripts/popularmovie.js"></script>
+</body>
+
+</html>

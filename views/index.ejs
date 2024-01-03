@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shows Now - Movie Ticket Booking</title>
   <link rel="stylesheet" href="/stylesheets/homepage.css">
+  <!-- <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="/javascripts/moviedata.js"></script>
+  <script src="/javascripts/swiper.js"></script> -->
+
 </head>
 
 <body>
@@ -13,7 +17,7 @@
     <div class="loader"></div>
 </div>
   <header class="nav">
-    <div class="logo">Shows Now</div>
+    <div class="logo">SHOWS NOW</div>
   </header>
 
   <section class="banner">
@@ -22,6 +26,13 @@
       <p>Book your tickets now!</p>
     </div>
   </section>
+  <!-- <div id="video-future">
+    <video src="/images/Napolean.mp4" autoplay muted loop></video>
+    <div id="ftext">
+      <h1>Napolean 2023 is out now!</h1>
+      <button>Watch Trailer</button>
+    </div>
+  </div> -->
   
   <section class="movie-container">
     <!-- Movie Cards will be dynamically added here -->
@@ -49,10 +60,10 @@
   <script>
     // Sample movie data
     const movies = [
-      { title: "Movies", description: "Description of Movie 1", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" , href:"/home" },
-      { title: "Shows", description: "Description of Movie 2", image: "https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" , href:"/details" },
-      { title: "Events", description: "Description of Movie 1", image: "https://i.pinimg.com/564x/9d/1f/5d/9d1f5d8b7d0ab5a9b3acdbe2da0f07e1.jpg" ,href:"/details"},
-      { title: "And Manymore", description: "Description of Movie 1", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" ,href:"/home" },
+      { title: "Movies", description: "WATCH YOUR MOVIES NOW", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" , href:"/home" },
+      { title: "Top Rated Movies", description: "WATCH YOUR TOP RATED MOVIES NOW", image: "https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" , href:"/toprated" },
+      { title: "Popular", description: "WATCH YOUR POPULAR NOW", image: "https://i.pinimg.com/564x/9d/1f/5d/9d1f5d8b7d0ab5a9b3acdbe2da0f07e1.jpg" ,href:"/toprated"},
+      // { title: "And Manymore", description: "Get started", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" ,href:"/popular" },
       // Add more movie data as needed
     ];
 

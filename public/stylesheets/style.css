@@ -241,7 +241,7 @@ body {
 
 .pagination{
   display:flex;
-  /* margin:10px 30px; */
+  padding:40px 30px;
   align-items: center;
   justify-content: center;
   color:#fff;

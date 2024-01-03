@@ -34,19 +34,28 @@
   
   </svg>
   <h1>PAYMENT SUCESSFULL!</h1>
-  <h4>Please wait you will be redirected</h4>
+  <h4>Please wait you will be redirected in <span id="countdown"></span> </h4>
   <div class="typing-container">
-    <span class="typing-text">Your Text Here</span>
+    <!-- <span class="typing-text">Your Text Here</span> -->
 </div>
 
    </div>
 
    <script>
-    
-    setTimeout(function() {
-        window.location.href = '/'; // Replace '/' with the actual URL of your homepage
-    }, 100000); // 5000 milliseconds = 5 seconds
-    // alert("Please dont press back or refresh button")
+    var seconds = 5;
+
+    function updateCountdown() {
+        document.getElementById('countdown').textContent = seconds;
+        seconds--;
+
+        if (seconds < 0) {
+            window.location.href = '/'; // Replace '/' with the actual URL of your homepage
+        } else {
+            setTimeout(updateCountdown, 1000); // 1000 milliseconds = 1 second
+        }
+    }
+
+    updateCountdown();
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

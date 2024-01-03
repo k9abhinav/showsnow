@@ -44,7 +44,12 @@ body {
     color: #e50914;
   }
   .logo{
-    font-size: 2rem;
+    font-weight: 600;
+    font-family: inherit;
+    letter-spacing: 0.5vw;
+    text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
+    font-size: 2.5rem;
+    padding: 5px;
   }
   .banner {
     background-image: url("https://images.unsplash.com/photo-1585951237318-9ea5e175b891?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -142,3 +147,58 @@ body {
   .custom-button:active {
     transform: scale(0.95);
   }
+
+  /* 
+  
+  */
+
+
+  #video-future{
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    
+  }
+  @media (max-width:768px){
+    #video-future video{
+      object-fit: cover;
+    }
+  }
+  #video-future video{
+    width: 100%;
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.4);
+  }
+  #ftext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+    border-radius: 12px;
+    padding: 0.6rem;
+    color: #000;
+  }
+  
+  #ftext button{
+    font-family: inherit;
+    padding: 1.2vw 2vw;
+    font-size: 10px;
+    margin-top: 10px;
+    font-weight: 700;
+    border-radius: 100px;
+    background-color: white;
+    border: 1px solid lightgray;
+    color: black;
+  }
+  
