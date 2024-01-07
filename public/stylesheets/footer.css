@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 .footer {
     background-color: #111;
-    padding: 3rem;
+    padding: 2rem;
     text-align: center;
     color: #fff;
+    font-family: 'Ubuntu' , sans-serif;
   }

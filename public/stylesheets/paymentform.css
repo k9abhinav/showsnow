@@ -84,3 +84,8 @@ button:hover {
         max-width: 800px;
     }
 }
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical; /* Allow vertical resizing */
+}

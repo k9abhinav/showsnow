@@ -1,14 +1,25 @@
+<!-- views/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Div Selection</title>
 </head>
 <body>
-HELLO
-<h1>Book Movie</h1>
-<p>Movie ID: <%= movieId %></p>
-  <a href="/paymentform"><button>Book Now</button></a>
+    <div id="div1" onclick="selectDiv('div1')">Div 1</div>
+    <div id="div2" onclick="selectDiv('div2')">Div 2</div>
+    <div id="div3" onclick="selectDiv('div3')">Div 3</div>
+    <div id="div4" onclick="selectDiv('div4')">Div 4</div>
+
+    <script>
+        function selectDiv(divId) {
+            fetch(`/selectDiv/${divId}`, { method: 'POST' })
+                .then(response => response.text())
+                .then(message => alert(message))
+                .catch(error => console.error(error));
+                
+        }
+    </script>
 </body>
 </html>

@@ -94,7 +94,25 @@ function showMovies(data) {
             
         
         `;
-
+                  movieEl.addEventListener("click", function(){
+                    selectDiv(this.id)
+                    console.log(this.id)
+                  });
+                  function selectDiv(divId) {
+                    fetch(`/home/${divId}`, { method: 'GET' })
+                        // .then(response => response.text())
+                        .then(response => {
+                          if (!response.ok) {
+                              throw new Error(`Failed to fetch: ${response.status} - ${response.statusText}`);
+                          }
+                          // Assuming the response is successful, redirect to another route
+                          window.location.href = '/toprated';
+                          return response.text();
+                      })
+                        .then(message => console.log(message))
+                        .catch(error => console.error(error));
+                        
+                }
     movielist.appendChild(movieEl);
    
     
@@ -153,6 +171,7 @@ function swiperMovies(data) {
       movies;
     const movieElement = document.createElement("div");
     movieElement.classList.add("swiper-slide");
+    movieElement.id = `${id}`;
     movieElement.innerHTML = `
         <div class="swiper-content">
         <img src="${imageURL + poster_path}" id="${id}" >
@@ -170,7 +189,25 @@ function swiperMovies(data) {
         
         
         `;
-
+        movieElement.addEventListener("click", function(){
+          selectDiv(this.id)
+          console.log(this.id)
+        });
+        function selectDiv(divId) {
+          fetch(`/home/${divId}`, { method: 'GET' })
+              // .then(response => response.text())
+              .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch: ${response.status} - ${response.statusText}`);
+                }
+                // Assuming the response is successful, redirect to another route
+                window.location.href = '/toprated';
+                return response.text();
+            })
+              .then(message => console.log(message))
+              .catch(error => console.error(error));
+              
+      }
     manymovies.appendChild(movieElement);
   });
 }

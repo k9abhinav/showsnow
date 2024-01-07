@@ -36,7 +36,6 @@ function showDetails(movie) {
   } = movie;
 
   const movieDetails = document.createElement("div");
-  movieDetails.id = thisdiv;
   movieDetails.classList.add("container");
   movieDetails.innerHTML = `
     <!-- Your HTML template for displaying movie details goes here -->
@@ -50,16 +49,16 @@ function showDetails(movie) {
             ${title}
         </div>
         <div class="star">
-            Ratings - ${vote_average.toFixed(1)}/10
+            <i class="fa fa-star checked" style="font-size:24px"></i>${vote_average.toFixed(1)}/10
         </div>
         <div class="lang">
            Released on : ${release_date}
         </div>
         <div class="bio">
-            ${vote_count}K Reviews
+            ${vote_count}K
         </div>
         <div class="bookticket">
-            <button class="btn" id="${movieDetails.id}" onclick="getdivid()">Book Tickets</button>
+            <a href="/paymentform"><button class="btn">Book Tickets</button></a>
         </div>
     </div>
 </div>
@@ -74,23 +73,6 @@ function showDetails(movie) {
         </div>
 
   `;
-  
+
   detailsmain.appendChild(movieDetails);
 }
-function getdivid() {
-    window.location.href = '/seats';
-
-//     console.log("Requesting movie ID:", thatId);
-  
-//     fetch(`/toprated/${thatId}`, { method: 'GET' })
-//       .then(response => {
-//         console.log("Response received:", response);
-//         if (!response.ok) {
-//           throw new Error(`Failed to fetch: ${response.status} - ${response.statusText}`);
-//         }
-//         console.log("Request successful. Redirecting to /seats.");
-//         window.location.href = '/seats';
-//       })
-//       .catch(error => console.error(error));
-  }
-  

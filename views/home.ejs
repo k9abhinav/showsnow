@@ -84,25 +84,64 @@
     <script src="/javascripts/homepage.js"></script>
     <script>
       document.querySelector('#ftext button')
-      .addEventListener('mouseover',function(){
-        let napolean = document.querySelector('#ftext h1')
-        napolean.style.display = 'none'
-        gsap.to("#video-future video",{
-          opacity:1,
-          duration:0.9,
-          ease: Power4
-        })
-      })
-      document.querySelector('#ftext button')
-      .addEventListener('mouseleave',function(){
-        let napolean = document.querySelector('#ftext h1')
-        napolean.style.display = 'block'
-        gsap.to("#video-future video",{
-          opacity:0,
-          duration:0.9,
-          ease: Power4
-        })
-      })
+    .addEventListener('mouseover', function () {
+      let button = document.querySelector('#ftext button');
+      gsap.to(button, {
+        opacity: 0,
+        duration: 0.9,
+        ease: 'power4'
+      });
+
+      let h1Element = document.querySelector('#ftext h1');
+      h1Element.style.display = 'none';
+
+      gsap.to("#video-future video", {
+        opacity: 1,
+        duration: 0.9,
+        ease: 'power4'
+      });
+    });
+
+  document.querySelector('#ftext button')
+    .addEventListener('mouseleave', function () {
+      let button = document.querySelector('#ftext button');
+      gsap.to(button, {
+        opacity: 1,
+        duration: 0.9,
+        ease: 'power4'
+      });
+
+      let h1Element = document.querySelector('#ftext h1');
+      h1Element.style.display = 'block';
+
+      gsap.to("#video-future video", {
+        opacity: 0,
+        duration: 0.9,
+        ease: 'power4'
+      });
+    });
+      // document.querySelector('#ftext button')
+      // .addEventListener('mouseover',function(){
+      //   let napolean = document.querySelector('#ftext h1')
+      //   napolean.style.display = 'none'
+      //   gsap.to("#video-future video",{
+      //     opacity:1,
+      //     duration:0.9,
+      //     ease: Power4
+      //   })
+      //   style.
+      // })
+      // document.querySelector('#ftext button')
+      // .addEventListener('mouseleave',function(){
+      //   let button = document.querySelector('#ftext button');
+      //   let napolean = document.querySelector('#ftext h1')
+      //   napolean.style.display = 'block'
+      //   gsap.to("#video-future video",{
+      //     opacity:0,
+      //     duration:0.9,
+      //     ease: Power4
+      //   })
+      // })
     </script>
 </body>
 
