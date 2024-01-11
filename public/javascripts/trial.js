@@ -2,7 +2,8 @@ const APIKEY = "api_key=0e7fb9630b7a8648f2250631b68d391d";
 const baseURL = "https://api.themoviedb.org/3";
 const imageURL = "https://image.tmdb.org/t/p/w500";
 const popularURL =baseURL+"/movie/popular?language=en-US&page=1&"+APIKEY;
-
+// const tvshowsURL = baseURL+"/discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&sort_by=popularity.desc&"+APIKEY;
+// const tvshowsURL = `${baseURL}/discover/tv/${movieId}?include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&sort_by=popularity.desc&${APIKEY}`;
 const thisdiv = document.querySelector(".thisdiv").textContent;
 console.log(thisdiv)
 // Replace this with the specific movie ID you want to fetch
@@ -20,6 +21,22 @@ function getMovieDetails(url) {
     //   console.log(data)
     });
 }
+// getDetails(APIURL, tvshowsURL);
+
+// function getDetails(APIURL, tvshowsURL) {
+//   fetch(APIURL)
+//     .then((res) => {
+//       if (!res.ok) {
+//         // If movie details not found, fetch TV show details
+//         return fetch(tvshowsURL);
+//       }
+//       return res.json();
+//     })
+//     .then((data) => {
+//       showDetails(data);
+//       // console.log(data);
+//     });
+// }
 
 const detailsmain = document.querySelector(".main-detail");
 
@@ -28,8 +45,10 @@ function showDetails(movie) {
 
   const {
     title,
+    name,
     poster_path,
     vote_average,
+    backdrop_path,
     vote_count,
     release_date,
     overview,
@@ -43,11 +62,11 @@ function showDetails(movie) {
     <div class="imgclass">
     <div class="up-content">
     <div class="img1">
-        <img src="${imageURL + poster_path}" alt="${title}" />
+        <img src="${imageURL + poster_path  }" alt=" ${title || name}" />
     </div>
     <div class="content">
         <div class="name">
-            ${title}
+            ${title || name}
         </div>
         <div class="star">
             Ratings - ${vote_average.toFixed(1)}/10
@@ -78,7 +97,7 @@ function showDetails(movie) {
   detailsmain.appendChild(movieDetails);
 }
 function getdivid() {
-    window.location.href = '/seats';
+    window.location.href = '/paymentsummary';
 
 //     console.log("Requesting movie ID:", thatId);
   

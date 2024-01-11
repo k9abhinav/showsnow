@@ -30,6 +30,12 @@ const userSchema = mongoose.Schema({
     type: String,
     required:true,
   },
+  // bookings: [{
+  //   movieId: { type: Schema.Types.ObjectId, ref: 'Movie' },
+  //   seats: Number,
+  //   totalPrice: Number,
+  //   paymentConfirmed: { type: Boolean, default: false },
+  // }],
   
 },{timestamps:true})
 

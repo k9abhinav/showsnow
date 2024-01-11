@@ -89,7 +89,7 @@ function showMovies(data) {
                 <br>
                 <p>${overview}</p> 
                 <br>
-                <a href="/paymentform"><button class="know-more" id="${id}">Book Now</button</a>
+                <a href="/toprated"><button class="know-more" id="${id}">Book Now</button</a>
             </div>
             
         
@@ -183,7 +183,7 @@ function swiperMovies(data) {
             vote_average
           )}">${vote_average.toFixed(1)}</span> 
           <h3>${vote_count}k Reviews</h3>
-          <a href="/paymentform"><button class="know-more-swiper" id="${id}">Book Now</button</a>
+          <button class="know-more-swiper" onclick="selectDiv(this.id)"id="${id}">Book Now</button>
         
         </div>
         

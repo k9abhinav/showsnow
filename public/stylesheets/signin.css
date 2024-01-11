@@ -47,7 +47,14 @@ body {
   margin-bottom: 30px;
   text-align: center;
 }
-
+.top-container h1{
+  font-weight: 600;
+  color: red;
+    font-family: inherit;
+    letter-spacing: 0.2vw;
+    text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
+    margin-bottom: 20px;
+}
 .top-container>img {
   width: 40%;
   padding-bottom: 45px;

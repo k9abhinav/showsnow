@@ -30,7 +30,8 @@ button {
     font-size: 16px; /* Adjust font size as needed */
     border-radius: 5px; /* Optional: Add rounded corners */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-
+    font-family: inherit;
+    font-weight: 700;
     /* Optional: Add box shadow for a subtle depth effect */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: absolute;
@@ -49,9 +50,9 @@ button {
     background: linear-gradient(to right bottom,
             rgba(blue, 0.5),
             rgba(green, 0.5));
-    background-image: url("https://images.unsplash.com/photo-1489846986031-7cea03ab8fd0?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://images.unsplash.com/photo-1501975558162-0be7b8ca95ea?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
-    background-position: center center;
+    /* background-position: center center; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -343,5 +344,8 @@ a {
     }
 }
 .rnav{
+    display: none;
+}
+.search{
     display: none;
 }

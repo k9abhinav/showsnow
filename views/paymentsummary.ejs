@@ -106,17 +106,20 @@
     <h1>Payment Summary</h1>
 
     <div class="summary">
-        <div class="summary-item">
-            <strong>Movie:</strong> Avengers: Endgame
+        <div class="summary-item" id="">
+            <strong>Movie:</strong> <%= title  %>
         </div>
-        <div class="summary-item">
-            <strong>Date:</strong> December 15, 2023
+        <div class="summary-item" id="date">
+            <strong>Date:</strong> <span id="dateValue"></span>
         </div>
-        <div class="summary-item">
+        <!-- <div class="summary-item">
             <strong>Session:</strong> Evening
+        </div> -->
+        <div class="summary-item" id="ticketId">
+            <strong>Ticket Booking ID:</strong> <span id="ticketIdValue"></span>
         </div>
-        <div class="summary-item">
-            <strong>Seats:</strong> 2
+        <div class="summary-item" id="seats">
+        <strong> Total no of Seats :</strong> <%= seats  %>
         </div>
     </div>
 
@@ -131,7 +134,7 @@
         <!-- Add more payment methods as needed -->
     </div>
 
-    <div class="taxes">
+    <!-- <div class="taxes">
         <div class="tax-item">
             <strong>Subtotal:</strong> <span >&#8377;</span>200.00
         </div>
@@ -144,16 +147,51 @@
         <div class="tax-item">
             <strong>GST (18%):</strong> <span >&#8377;</span>3.60
         </div>
-    </div>
+    </div> -->
 
-    <div class="total-amount">
-        <strong>Total Amount:</strong> <span >&#8377;</span>270.20
+    <div class="total-amount" id="price">
+        <strong>Total Amount:</strong> <span >&#8377;</span><%= total  %>
     </div>
 
     <a href="/payment-success"><button onclick="confirmPayment()">Confirm Payment</button></a>
 </div>
-
 <script>
+    // Generate an alphanumeric ticket ID based on movie, date, and number of seats
+    function generateTicketId(movieTitle, date, seats) {
+        const alphanumericChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const minLength = 6;
+
+        let ticketId = '';
+        while (ticketId.length < minLength) {
+            const randomIndex = Math.floor(Math.random() * alphanumericChars.length);
+            ticketId += alphanumericChars.charAt(randomIndex);
+        }
+
+        return `${movieTitle.toUpperCase().slice(0, 3)}-${date}-${seats}-${ticketId}`;
+    }
+
+    // Update the content of the element with id "ticketIdValue"
+    const movieTitle = '<%= title %>'; // Assuming title is a variable passed from your server-side code
+    const seatsCount = '<%= seats %>'; // Assuming seats is a variable passed from your server-side code
+    const currentDate = new Date();
+    const formattedDate = currentDate.toISOString().slice(0, 10); // Get YYYY-MM-DD format
+    const ticketId = generateTicketId(movieTitle, formattedDate, seatsCount);
+    document.getElementById("ticketIdValue").textContent = ticketId;
+</script>
+<script>
+    // Get the current date
+    const currentDateNow = new Date();
+
+    // Format the date (optional, you can adjust the format as needed)
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDateNow = currentDateNow.toLocaleDateString('en-US', options);
+
+    // Update the content of the element with id "dateValue"
+    document.getElementById("dateValue").textContent = formattedDateNow;
+</script>
+<script>
+    // const seats = document.getElementById("seats");
+    // const price = document.getElementById("price");
     function confirmPayment() {
         // Add logic to handle payment confirmation, e.g., redirect to payment gateway or show a success message
         alert('Payment confirmed!'); // Placeholder, replace with actual logic

@@ -1,3 +1,5 @@
+
+
 const APIKEY = "api_key=0e7fb9630b7a8648f2250631b68d391d";
 const baseURL = "https://api.themoviedb.org/3";
 // const APIURL = baseURL + "/movie/upcoming?language=en-US&page=1&" + APIKEY;
@@ -7,6 +9,7 @@ const tvshowsURL = baseURL+"/discover/tv?include_adult=false&include_null_first_
 const topratedURL = baseURL+"/movie/top_rated?language=en-US&page=1&"+APIKEY;
 const popularURL =baseURL+"/movie/popular?language=en-US&page=1&"+APIKEY;
 const peopleURL = baseURL+"/trending/person/day?language=en-US&"+APIKEY;
+const nowplayingURL = baseURL+"/movie/now_playing?language=en-US&page=1&"+APIKEY;
 
 
 

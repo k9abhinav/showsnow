@@ -6,6 +6,15 @@ body {
     padding: 0;
     background-color: #111;
     color: #fff;
+    
+    /* background-color: #f5f5f5; */
+  }
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+  ul{
+    list-style: none;
   }
   #loading-overlay {
     position: fixed;
@@ -36,12 +45,30 @@ body {
 
 
 
+.backimg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.55;
+}
+
+@media screen and (max-width: 768px) {
+  .backimg {
+    height: 100%;
+  }
+}
 
   .nav {
-    background-color: #111;
+    background-color: #000;
     padding: 1rem;
     text-align: center;
-    color: #e50914;
+    color: red;
+    box-shadow: rgba(139, 137, 155, 0.15) 0px 48px 100px 0px;
+
   }
   .logo{
     font-weight: 600;
@@ -76,7 +103,8 @@ body {
   .movie-card {
     width: 200px;
     margin: 1rem;
-    background-color: #333;
+    background-color: #ffc857;
+    background-image: linear-gradient(316deg, #ffc857 0%, #3e2f5b 74%);
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s;
@@ -87,22 +115,83 @@ body {
     transform: scale(1.05);
   }
   
-  .movie-card img {
+  /* .movie-card img {
     width: 100%;
     height: auto;
     border-radius: 8px 8px 0 0;
+  } */
+  .movie-card img {
+    width: 100%;
+    max-height: 300px; /* Adjust the max-height based on your preference */
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
   }
+  
   
   .movie-info {
     padding: 1rem;
     text-align: center;
+    color: #000;
   }
   
-  .footer {
-    background-color: #111;
-    padding: 1rem;
-    text-align: center;
+
+
+.footer {
+  background-color: #111;
+  padding: 2rem 0;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.footer-section h2 {
+  color: #ffc857;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links li {
+  margin-bottom: 10px;
+}
+
+.quick-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.quick-links a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
   }
+
+  .footer-section {
+      max-width: 100%;
+  }
+}
+
 
   .about {
     background-color: #222;
@@ -135,13 +224,17 @@ body {
     border: none;
     border-radius: 5px;
     color: #fff;
-    background-color: #3498db;
+    /* background-color: #3498db; */
+    background-color: #3e2f5b;
+    /* background-color: #ffc857;  */
+  /* background-image: linear-gradient(316deg, #ffc857 0%, #3e2f5b 74%); */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.2s;
   }
 
   .custom-button:hover {
-    background-color: #2980b9;
+    /* background-color: #2980b9; */
+    background-color: #15130d;
   }
 
   .custom-button:active {
@@ -200,5 +293,144 @@ body {
     background-color: white;
     border: 1px solid lightgray;
     color: black;
+  }
+  .swiper {
+    width: 100%;
+    height: 60vh;
+  }
+  
+  .swiper-slide {
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure content doesn't overflow */
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%; /* Ensures the image covers the entire slide */
+    object-fit: cover;
+    object-position:top; /* Center the image within the slide */
+  }
+  
+.swipe-backimg{
+  opacity: 0.75;
+}
+  
+  
+ .contact-head{
+    /* background-color: #333; */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .faqs, .contact-info {
+    background-color: #111;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-item, .contact-item {
+    margin-bottom: 20px;
+  }
+  
+  .question, .contact-item h3 {
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .question:hover, .contact-item h3:hover {
+    color: #007bff;
+  }
+  
+  .answer {
+    display: none;
+    margin-top: 10px;
+    color: #fff;
+  }
+  
+  .contact-item p {
+    margin: 0;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .faqs, .contact-info {
+      padding: 15px;
+    }
+  }
+  
+
+  .swiper-button-get-started {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  
+  .swiper-button-get-started a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #3e2f5b;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .swiper-button-get-started a:hover {
+    background-color: #15130d;
+  }
+  
+  .swiper-button-get-started a:active {
+    transform: scale(0.95);
+  }
+  .swiper-content {
+    position: absolute;
+    bottom: 40px;
+    left: 10px; /* Adjust the left value as needed */
+    z-index: 10;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 10px; /* Add some padding for better visibility */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .swiper-button-get-started {
+    margin-top: 10px;
+  }
+  
+  .large-button {
+    padding: 15px 25px;
+    font-size: 18px;
+  }
+  
+  .image-description {
+    font-size: 14px;
+    line-height: 1.4;
   }
   

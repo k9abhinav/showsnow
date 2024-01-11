@@ -27,20 +27,13 @@ function getMovieDetails(url) {
 }
 const name_movie=document.querySelector(".displayname")
 function showDetails(movie) {
+  const { title } = movie;
+  name_movie.textContent = `Booking Tickets for : ${title}`;
 
-  const {
-    title,
-    poster_path,
-    vote_average,
-    vote_count,
-    release_date,
-    overview,
-  } = movie;
-
-  
-  name_movie.textContent=`Booking Tickets for : ${title}`;
-  
+  // Store 'title' in session
+  setSessionData("movieTitle", title);
 }
+
 
 const container = document.querySelector(".container");
 const seats = document.querySelectorAll(".row .seat:not(.occupied)");
@@ -67,14 +60,30 @@ function setMovieData(movieIndex, moviePrice) {
   localStorage.setItem("selectedMoviePrice", moviePrice);
 }
 
+// function updateSelectedCount() {
+//   const selectedSeats = document.querySelectorAll(".row .seat.selected");
+//   // const seatsIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat));
+//   // localStorage.setItem("selectedSeats", JSON.stringify(seatsIndex));
+//   const selectedSeatsCount = selectedSeats.length;
+//   count.innerText = selectedSeatsCount;
+//   total.innerText = selectedSeatsCount * ticketPrice * 15;
+// }
 function updateSelectedCount() {
   const selectedSeats = document.querySelectorAll(".row .seat.selected");
-  // const seatsIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat));
-  // localStorage.setItem("selectedSeats", JSON.stringify(seatsIndex));
   const selectedSeatsCount = selectedSeats.length;
+  const totalPrice = selectedSeatsCount * ticketPrice * 15;
+  const movieTitle = getSessionData("movieTitle"); // Retrieve 'title' from session
+
   count.innerText = selectedSeatsCount;
-  total.innerText = selectedSeatsCount * ticketPrice * 15;
+  total.innerText = totalPrice;
+
+  // Store data in session
+  setSessionData("selectedSeatsCount", selectedSeatsCount);
+  setSessionData("totalPrice", totalPrice);
+  setSessionData("movieTitle", movieTitle); // Save 'title' to session
 }
+
+
 
 movieSelect.addEventListener("change", (e) => {
   ticketPrice = +e.target.value;
@@ -95,5 +104,24 @@ container.addEventListener("click", (e) => {
 // Init
 // populateUI();
 // updateSelectedCount();
+
+function setSessionData(key, value) {
+  sessionStorage.setItem(key, JSON.stringify(value));
+}
+
+function getSessionData(key) {
+  const data = sessionStorage.getItem(key);
+  return data ? JSON.parse(data) : null;
+}
+
+function redirect() {
+  // Retrieve data from session
+  const selectedSeatsCount = getSessionData("selectedSeatsCount");
+  const totalPrice = getSessionData("totalPrice");
+  const movieTitle = getSessionData("movieTitle");
+
+  // Redirect to the next route with the data
+  window.location.href = `/paymentsummary?seats=${selectedSeatsCount}&total=${totalPrice}&title=${encodeURIComponent(movieTitle)}`;
+}
 
 

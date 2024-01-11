@@ -4,6 +4,6 @@
     background-color: #111;
     padding: 2rem;
     text-align: center;
-    color: #fff;
-    font-family: 'Ubuntu' , sans-serif;
+    color: #fff !important;
+    font-family: 'Ubuntu' , sans-serif !important;
   }

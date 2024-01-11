@@ -9,6 +9,8 @@
   <!-- <link rel="stylesheet" href="/stylesheets/style.css">
   <script src="/javascripts/moviedata.js"></script>
   <script src="/javascripts/swiper.js"></script> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 </head>
 
@@ -19,13 +21,50 @@
   <header class="nav">
     <div class="logo">SHOWS NOW</div>
   </header>
-
-  <section class="banner">
-    <div class="banner-content">
-      <h1>Watch Movies Shows, Events.</h1>
-      <p>Book your tickets now!</p>
+  <div class="swiper mySwiper" id="Home">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="/images/gig.jpg" alt="" class="swipe-backimg">
+        <!-- <div class="swiper-content">
+          <p class="image-description">Your image description goes here. This can provide additional details about the
+            image.</p>
+          <div class="swiper-button-get-started">
+            <a href="/register" class="custom-button large-button">Get Started</a>
+          </div>
+        </div> -->
+      </div>
+      <div class="swiper-slide"><img src="/images/john.jpeg" alt="" class="swipe-backimg">
+        <!-- <div class="swiper-content">
+          <p class="image-description">Your image description goes here. This can provide additional details about the
+            image.</p>
+          <div class="swiper-button-get-started">
+            <a href="/register" class="custom-button large-button">Get Started</a>
+          </div>
+        </div> -->
+      </div>
+      <div class="swiper-slide"><img src="/images/gg.jpg" alt="" class="swipe-backimg">
+        <!-- <div class="swiper-content">
+          <p class="image-description">Your image description goes here. This can provide additional details about the
+            image.</p>
+          <div class="swiper-button-get-started">
+            <a href="/register" class="custom-button large-button">Get Started</a>
+          </div>
+        </div> -->
+      </div>
+      <div class="swiper-slide"><img src="/images/oppenheimer.avif" alt="" class="swipe-backimg">
+        <!-- <div class="swiper-content">
+          <p class="image-description">Your image description goes here. This can provide additional details about the
+            image.</p>
+          <div class="swiper-button-get-started">
+            <a href="/register" class="custom-button large-button">Get Started</a>
+          </div>
+        </div> -->
+      </div>
     </div>
-  </section>
+    <div class="swiper-pagination"></div>
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+  </div>
+
   <!-- <div id="video-future">
     <video src="/images/Napolean.mp4" autoplay muted loop></video>
     <div id="ftext">
@@ -33,39 +72,206 @@
       <button>Watch Trailer</button>
     </div>
   </div> -->
-  
-  <section class="movie-container">
-    <!-- Movie Cards will be dynamically added here -->
+  <div class="inside">
+    <img src="/images/login-background.jpg" alt="" class="backimg">
+    <section class="movie-container">
+      <!-- Movie Cards will be dynamically added here -->
+    </section>
+  </div>
+
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Watch Movies Shows, Events.</h1>
+      <p>Book your tickets now!</p>
+    </div>
   </section>
-  <section class="about">
+  <!-- <section class="about">
     <div class="about-content">
       <h2>About Shows Now</h2>
       <p>Welcome to Shows Now, your go-to platform for booking movie tickets seamlessly. Discover the latest movies,
         explore showtimes, and book your tickets with ease. Enjoy a hassle-free movie experience with Shows Now.</p>
     </div>
-  </section>
-  <footer class="footer">
+  </section> -->
+
+  <div class="contact-head">
+    <h1>Contact Us</h1>
+  </div>
+
+  <div class="container" >
+    <section class="faqs" id="FAQ">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3 class="question">How do I book tickets?<img width="30" height="30"
+            src="https://img.icons8.com/ios/30/down-squared--v1.png" alt="down-squared--v1" /></h3>
+        <div class="answer">
+          <p>To book tickets, visit our website and follow the easy steps in the booking process.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="question">Can I cancel my ticket?<img width="30" height="30"
+            src="https://img.icons8.com/ios/30/down-squared--v1.png" alt="down-squared--v1" /></h3>
+        <div class="answer">
+          <p>Yes, you can cancel your ticket before the showtime. Log in to your account and go to the "My Bookings"
+            section for cancellation options.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="question">What payment methods are accepted?<img width="30" height="30"
+            src="https://img.icons8.com/ios/30/down-squared--v1.png" alt="down-squared--v1" /></h3>
+        <div class="answer">
+          <p>We accept various payment methods, including credit cards, debit cards, and online payment platforms.
+            Choose the one that suits you during the checkout process.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="question">Is there a mobile app for booking?<img width="30" height="30"
+            src="https://img.icons8.com/ios/30/down-squared--v1.png" alt="down-squared--v1" /></h3>
+        <div class="answer">
+          <p>Yes, we have a mobile app available for both Android and iOS devices. Download it from the respective app
+            stores and enjoy a convenient booking experience on the go.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="question">Are there group discounts available?<img width="30" height="30"
+            src="https://img.icons8.com/ios/30/down-squared--v1.png" alt="down-squared--v1" /></h3>
+        <div class="answer">
+          <p>Yes, we offer group discounts for bookings of 10 or more tickets. Contact our customer support for more
+            information on group pricing and benefits.</p>
+        </div>
+      </div>
+      <!-- Add more FAQ items as needed -->
+    </section>
+
+    <section class="contact-info">
+      <h2>Contact Information</h2>
+      <div class="contact-item">
+        <h3>Email</h3>
+        <p>info@showsnow.com</p>
+      </div>
+      <div class="contact-item">
+        <h3>Phone</h3>
+        <p>+1 (555) 123-4567</p>
+      </div>
+      <div class="contact-item">
+        <h3>Fax</h3>
+        <p>+1 (555) 987-6543</p>
+      </div>
+      <div class="contact-item">
+        <h3>WhatsApp</h3>
+        <p>+1 (555) 789-0123</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- <footer class="footer">
     <p>&copy; 2023 Shows Now - All rights reserved.</p>
+  </footer> -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h2>About Us</h2>
+        <p>Welcome to Shows Now, your go-to platform for booking movie tickets seamlessly. Discover the latest movies,
+          explore showtimes, and book your tickets with ease. Enjoy a hassle-free movie experience with Shows Now.</p>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="/home">Movies</a></li>
+          <li><a href="/tvshow">TV Shows</a></li>
+          <li><a href="#FAQ">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@showsnow.com</p>
+        <p>Phone: +1 (555) 123-4567</p>
+      </div>
+
+      <div class="footer-section legal">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="/termsofuse">Terms of Use</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2023 Shows Now - All rights reserved.</p>
+    </div>
   </footer>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Simulate API data loading time (replace this with your actual data loading logic)
-    setTimeout(() => {
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const questions = document.querySelectorAll('.question');
+
+      questions.forEach(question => {
+        question.addEventListener('click', function () {
+          const answer = this.nextElementSibling;
+
+          if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+          } else {
+            answer.style.display = 'block';
+          }
+        });
+      });
+    });
+
+  </script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Simulate API data loading time (replace this with your actual data loading logic)
+      setTimeout(() => {
         // Remove the loading overlay
         document.getElementById("loading-overlay").style.display = "none";
-    }, 3000); // Adjust the timeout based on your actual loading time
-});
+      }, 3000); // Adjust the timeout based on your actual loading time
+    });
 
-</script>
+  </script>
   <script>
     // Sample movie data
     const movies = [
-      { title: "Movies", description: "WATCH YOUR MOVIES NOW", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" , href:"/home" },
-      { title: "Top Rated Movies", description: "WATCH YOUR TOP RATED MOVIES NOW", image: "https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" , href:"/toprated" },
-      { title: "Popular", description: "WATCH YOUR POPULAR NOW", image: "https://i.pinimg.com/564x/9d/1f/5d/9d1f5d8b7d0ab5a9b3acdbe2da0f07e1.jpg" ,href:"/toprated"},
-      // { title: "And Manymore", description: "Get started", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" ,href:"/popular" },
-      // Add more movie data as needed
-    ];
+  { title: "Now Playing", description: "Check out the latest blockbuster movies currently playing in theaters.", image: "/images/Jawan.jpg", href: "/nowplaying" },
+  { title: "Upcoming Movies", description: "Discover upcoming movie releases and be the first to book your tickets.", image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", href: "/home" },
+  { title: "TV Shows", description: "Explore a wide range of TV shows across genres for your entertainment.", image:"/images/Killers.jpg" , href: "/tvshow" },
+  { title: "Popular Movies", description: "Discover the most popular movies trending now among the audience.", image: "/images/spider-man-across-the-spider-verse-movie-poster.jpg", href: "/popular" }
+  // Add more movie data as needed
+];
+
+
 
     // Function to create a movie card element
     function createMovieCard(movie) {

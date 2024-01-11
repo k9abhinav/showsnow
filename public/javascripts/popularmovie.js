@@ -128,7 +128,7 @@ form.addEventListener("submit", (e) => {
   if (searchTerm) {
     getMovies(searchURL + "&query=" + searchTerm);
   } else {
-    getMovies(APIURL);
+    getMovies(popularURL);
   }
 });
 

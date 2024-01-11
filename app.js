@@ -8,6 +8,7 @@ var flash = require('connect-flash')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const paymentRoutes = require('./routes/payment');
 // var firstRouteRouter = require('./routes/firstRoute');
 // var secondRouteRouter = require('./routes/secondRoute');
 
@@ -42,6 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/payment', paymentRoutes);
 // app.use('/first-route', firstRouteRouter);
 // app.use('/second-route', secondRouteRouter);
 
