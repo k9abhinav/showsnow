@@ -97,7 +97,7 @@ function showDetails(movie) {
   detailsmain.appendChild(movieDetails);
 }
 function getdivid() {
-    window.location.href = '/paymentsummary';
+    window.location.href = '/seats';
 
 //     console.log("Requesting movie ID:", thatId);
   

@@ -41,14 +41,14 @@ body {
 
 /* krathi movie style css */
 #container {
-  height: max-content;
   background: #111; 
   color: whitesmoke;
-  /* margin: 0; */
+  height: fit-content;
+
 }
 #container h1{
   text-align: center;
-  padding:1.5rem 0rem ;
+  padding:1rem 0rem ;
 }
 .main-movie {
   display: flex;

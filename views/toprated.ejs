@@ -14,6 +14,19 @@
     <h1 class="thisdiv"><%= selectedDivId %></h1>
     <div class="main-detail"></div>
     <%- include('../components/footer.ejs') %>
+    <div id="loading-overlay">
+        <div class="loader"></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Simulate API data loading time (replace this with your actual data loading logic)
+          setTimeout(() => {
+            // Remove the loading overlay
+            document.getElementById("loading-overlay").style.display = "none";
+          }, 3000); // Adjust the timeout based on your actual loading time
+        });
+    
+      </script>
     <script src="/javascripts/trial.js"></script>
 </body>
 </html>

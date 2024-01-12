@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -100,41 +101,55 @@
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <h1>Payment Summary</h1>
+    <div class="container">
+        <h1>Payment Summary</h1>
 
-    <div class="summary">
-        <div class="summary-item" id="">
-            <strong>Movie:</strong> <%= title  %>
-        </div>
-        <div class="summary-item" id="date">
-            <strong>Date:</strong> <span id="dateValue"></span>
-        </div>
-        <!-- <div class="summary-item">
+        <div class="summary">
+            <div class="summary-item" id="">
+                <strong>Movie:</strong>
+                <%= title %>
+            </div>
+            <div class="summary-item" id="date">
+                <strong>Date:</strong> <span id="dateValue"></span>
+            </div>
+            <!-- <div class="summary-item">
             <strong>Session:</strong> Evening
         </div> -->
-        <div class="summary-item" id="ticketId">
-            <strong>Ticket Booking ID:</strong> <span id="ticketIdValue"></span>
+            <div class="summary-item" id="ticketId">
+                <strong>Ticket Booking ID:</strong> <span id="ticketIdValue"></span>
+            </div>
+            <div class="summary-item" id="seats">
+                <strong> Total no of Seats :</strong>
+                <%= seats %>
+            </div>
         </div>
-        <div class="summary-item" id="seats">
-        <strong> Total no of Seats :</strong> <%= seats  %>
+
+        <div class="payment-methods">
+            <p>Select Payment Method:</p>
+            <div class="payment-method"> <img width="40" height="40"
+                    src="https://img.icons8.com/ios-filled/50/bank-card-back-side.png" alt="bank-card-back-side" />
+            </div>
+            <div class="payment-method"> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40"
+                    viewBox="0 0 48 48">
+                    <path fill="#0d62ab"
+                        d="M18.7,13.767l0.005,0.002C18.809,13.326,19.187,13,19.66,13h13.472c0.017,0,0.034-0.007,0.051-0.006	C32.896,8.215,28.887,6,25.35,6H11.878c-0.474,0-0.852,0.335-0.955,0.777l-0.005-0.002L5.029,33.813l0.013,0.001	c-0.014,0.064-0.039,0.125-0.039,0.194c0,0.553,0.447,0.991,1,0.991h8.071L18.7,13.767z">
+                    </path>
+                    <path fill="#199be2"
+                        d="M33.183,12.994c0.053,0.876-0.005,1.829-0.229,2.882c-1.281,5.995-5.912,9.115-11.635,9.115	c0,0-3.47,0-4.313,0c-0.521,0-0.767,0.306-0.88,0.54l-1.74,8.049l-0.305,1.429h-0.006l-1.263,5.796l0.013,0.001	c-0.014,0.064-0.039,0.125-0.039,0.194c0,0.553,0.447,1,1,1h7.333l0.013-0.01c0.472-0.007,0.847-0.344,0.945-0.788l0.018-0.015	l1.812-8.416c0,0,0.126-0.803,0.97-0.803s4.178,0,4.178,0c5.723,0,10.401-3.106,11.683-9.102	C42.18,16.106,37.358,13.019,33.183,12.994z">
+                    </path>
+                    <path fill="#006fc4"
+                        d="M19.66,13c-0.474,0-0.852,0.326-0.955,0.769L18.7,13.767l-2.575,11.765	c0.113-0.234,0.359-0.54,0.88-0.54c0.844,0,4.235,0,4.235,0c5.723,0,10.432-3.12,11.713-9.115c0.225-1.053,0.282-2.006,0.229-2.882	C33.166,12.993,33.148,13,33.132,13H19.66z">
+                    </path>
+                </svg></div>
+            <img width="40" height="40" src="https://img.icons8.com/ios-filled/40/bhim-upi.png" alt="bhim-upi" />
+            <div class="payment-method"> </div>
+            <!-- Add more payment methods as needed -->
         </div>
-    </div>
 
-    <div class="payment-methods">
-        <p>Select Payment Method:</p>
-        <div class="payment-method"> <img width="40" height="40" src="https://img.icons8.com/ios-filled/50/bank-card-back-side.png" alt="bank-card-back-side"/> </div>
-        <div class="payment-method"> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48">
-            <path fill="#0d62ab" d="M18.7,13.767l0.005,0.002C18.809,13.326,19.187,13,19.66,13h13.472c0.017,0,0.034-0.007,0.051-0.006	C32.896,8.215,28.887,6,25.35,6H11.878c-0.474,0-0.852,0.335-0.955,0.777l-0.005-0.002L5.029,33.813l0.013,0.001	c-0.014,0.064-0.039,0.125-0.039,0.194c0,0.553,0.447,0.991,1,0.991h8.071L18.7,13.767z"></path><path fill="#199be2" d="M33.183,12.994c0.053,0.876-0.005,1.829-0.229,2.882c-1.281,5.995-5.912,9.115-11.635,9.115	c0,0-3.47,0-4.313,0c-0.521,0-0.767,0.306-0.88,0.54l-1.74,8.049l-0.305,1.429h-0.006l-1.263,5.796l0.013,0.001	c-0.014,0.064-0.039,0.125-0.039,0.194c0,0.553,0.447,1,1,1h7.333l0.013-0.01c0.472-0.007,0.847-0.344,0.945-0.788l0.018-0.015	l1.812-8.416c0,0,0.126-0.803,0.97-0.803s4.178,0,4.178,0c5.723,0,10.401-3.106,11.683-9.102	C42.18,16.106,37.358,13.019,33.183,12.994z"></path><path fill="#006fc4" d="M19.66,13c-0.474,0-0.852,0.326-0.955,0.769L18.7,13.767l-2.575,11.765	c0.113-0.234,0.359-0.54,0.88-0.54c0.844,0,4.235,0,4.235,0c5.723,0,10.432-3.12,11.713-9.115c0.225-1.053,0.282-2.006,0.229-2.882	C33.166,12.993,33.148,13,33.132,13H19.66z"></path>
-            </svg></div>
-            <img width="40" height="40" src="https://img.icons8.com/ios-filled/40/bhim-upi.png" alt="bhim-upi"/>
-            <div class="payment-method">  </div>
-        <!-- Add more payment methods as needed -->
-    </div>
-
-    <!-- <div class="taxes">
+        <!-- <div class="taxes">
         <div class="tax-item">
             <strong>Subtotal:</strong> <span >&#8377;</span>200.00
         </div>
@@ -149,54 +164,62 @@
         </div>
     </div> -->
 
-    <div class="total-amount" id="price">
-        <strong>Total Amount:</strong> <span >&#8377;</span><%= total  %>
+        <div class="total-amount" id="price">
+            <strong>Total Amount:</strong> <span>&#8377;</span>
+            <%= total %>
+        </div>
+        <!-- <a href="/payment-success"></a><button onclick="confirmPayment()">
+            <form>
+                <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                    data-payment_button_id="pl_NNAAQnATSp4J1G" async> </script>
+            </form>
+        </button></a> -->
+        <a href="https://rzp.io/l/BsBwDnKWgI"><button onclick="confirmPayment()">Confirm Payment</button></a>
     </div>
 
-    <a href="/payment-success"><button onclick="confirmPayment()">Confirm Payment</button></a>
-</div>
-<script>
-    // Generate an alphanumeric ticket ID based on movie, date, and number of seats
-    function generateTicketId(movieTitle, date, seats) {
-        const alphanumericChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        const minLength = 6;
+    <script>
+        // Generate an alphanumeric ticket ID based on movie, date, and number of seats
+        function generateTicketId(movieTitle, date, seats) {
+            const alphanumericChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            const minLength = 6;
 
-        let ticketId = '';
-        while (ticketId.length < minLength) {
-            const randomIndex = Math.floor(Math.random() * alphanumericChars.length);
-            ticketId += alphanumericChars.charAt(randomIndex);
+            let ticketId = '';
+            while (ticketId.length < minLength) {
+                const randomIndex = Math.floor(Math.random() * alphanumericChars.length);
+                ticketId += alphanumericChars.charAt(randomIndex);
+            }
+
+            return `${movieTitle.toUpperCase().slice(0, 3)}-${date}-${seats}-${ticketId}`;
         }
 
-        return `${movieTitle.toUpperCase().slice(0, 3)}-${date}-${seats}-${ticketId}`;
-    }
+        // Update the content of the element with id "ticketIdValue"
+        const movieTitle = '<%= title %>'; // Assuming title is a variable passed from your server-side code
+        const seatsCount = '<%= seats %>'; // Assuming seats is a variable passed from your server-side code
+        const currentDate = new Date();
+        const formattedDate = currentDate.toISOString().slice(0, 10); // Get YYYY-MM-DD format
+        const ticketId = generateTicketId(movieTitle, formattedDate, seatsCount);
+        document.getElementById("ticketIdValue").textContent = ticketId;
+    </script>
+    <script>
+        // Get the current date
+        const currentDateNow = new Date();
 
-    // Update the content of the element with id "ticketIdValue"
-    const movieTitle = '<%= title %>'; // Assuming title is a variable passed from your server-side code
-    const seatsCount = '<%= seats %>'; // Assuming seats is a variable passed from your server-side code
-    const currentDate = new Date();
-    const formattedDate = currentDate.toISOString().slice(0, 10); // Get YYYY-MM-DD format
-    const ticketId = generateTicketId(movieTitle, formattedDate, seatsCount);
-    document.getElementById("ticketIdValue").textContent = ticketId;
-</script>
-<script>
-    // Get the current date
-    const currentDateNow = new Date();
+        // Format the date (optional, you can adjust the format as needed)
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDateNow = currentDateNow.toLocaleDateString('en-US', options);
 
-    // Format the date (optional, you can adjust the format as needed)
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDateNow = currentDateNow.toLocaleDateString('en-US', options);
-
-    // Update the content of the element with id "dateValue"
-    document.getElementById("dateValue").textContent = formattedDateNow;
-</script>
-<script>
-    // const seats = document.getElementById("seats");
-    // const price = document.getElementById("price");
-    function confirmPayment() {
-        // Add logic to handle payment confirmation, e.g., redirect to payment gateway or show a success message
-        alert('Payment confirmed!'); // Placeholder, replace with actual logic
-    }
-</script>
+        // Update the content of the element with id "dateValue"
+        document.getElementById("dateValue").textContent = formattedDateNow;
+    </script>
+    <script>
+        // const seats = document.getElementById("seats");
+        // const price = document.getElementById("price");
+        function confirmPayment() {
+            // Add logic to handle payment confirmation, e.g., redirect to payment gateway or show a success message
+            alert('Payment confirmed!'); // Placeholder, replace with actual logic
+        }
+    </script>
 
 </body>
+
 </html>

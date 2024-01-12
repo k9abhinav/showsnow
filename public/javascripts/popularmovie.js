@@ -90,12 +90,30 @@ function showMovies(data) {
                 <br>
                 <p>${overview}</p> 
                 <br>
-                <a href="/book"><button class="know-more" id="${id}">Book Now</button</a>
+                <a href="/toprated"><button class="know-more" id="${id}">Book Now</button</a>
             </div>
             
         
         `;
-
+        movieEl.addEventListener("click", function(){
+          selectDiv(this.id)
+          console.log(this.id)
+        });
+        function selectDiv(divId) {
+          fetch(`/home/${divId}`, { method: 'GET' })
+              // .then(response => response.text())
+              .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch: ${response.status} - ${response.statusText}`);
+                }
+                // Assuming the response is successful, redirect to another route
+                window.location.href = '/toprated';
+                return response.text();
+            })
+              .then(message => console.log(message))
+              .catch(error => console.error(error));
+              
+      }
     movielist.appendChild(movieEl);
    
     
@@ -171,7 +189,7 @@ function swiperMovies(data) {
         
         
         `;
-
+        
     manymovies.appendChild(movieElement);
   });
 }
