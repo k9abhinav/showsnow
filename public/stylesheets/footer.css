@@ -1,9 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-
+a{
+  text-decoration: none;
+  color: inherit;
+}
+ul{
+  list-style: none;
+}
 .footer {
-    background-color: #111;
+    /* background-color: #111;
     padding: 2rem;
     text-align: center;
-    color: #fff !important;
+    color: #fff !important; */
     font-family: 'Ubuntu' , sans-serif !important;
+  }
+  
+
+.footer {
+  background-color: #111;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.footer-section h2 {
+  color: #ffc857;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links li {
+  margin-bottom: 10px;
+}
+
+.quick-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.quick-links a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-section {
+      max-width: 100%;
+  }
+}
+
+
+  .about {
+    background-color: #222;
+    padding: 2rem 1rem;
+    color: #fff;
+    
+    border-radius: 12px;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
   }

@@ -13,6 +13,9 @@ passport.use(new localStrategy(userModel.authenticate()));
 router.get("/", function (req, res) {
   res.render("index");
 });
+router.get("/new", function (req, res) {
+  res.render("newpopular");
+});
 router.get("/home", function (req, res) {
   res.render("home");
 });
@@ -68,8 +71,8 @@ router.get("/paymentsummary", isLoggedInforBook, function (req, res) {
 });
 router.get("/paymentform", async function (req, res) {
   try {
-  const seats = req.query.seats;
-    res.render("paymentform",{seats});
+    const seats = req.query.seats;
+    res.render("paymentform", { seats });
   } catch (error) {
     console.error(error);
     res.status(500).send("Internal Server Error");

@@ -1,87 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROFILE</title>
-    <link rel="stylesheet" href="/stylesheets/profile.css">
-    
-    <link rel="stylesheet" href="/stylesheets/navbar.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROFILE</title>
+  <link rel="stylesheet" href="/stylesheets/profile.css">
+  <link rel="stylesheet" href="/stylesheets/footer.css">
+  <link rel="stylesheet" href="/stylesheets/navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
+
 <body>
-    <%- include('../components/navbar.ejs') %>
-    
-    
+  <%- include('../components/navbar.ejs') %>
+
+
     <div class="profile-container">
       <div class="page-head">
         <h1 style="padding: 10px; margin: 0px;">YOUR PROFILE</h1>
-    <!-- <h2 style="padding: 10px; margin: 0px;">YOUR PROFILE</h2> -->
+        <!-- <h2 style="padding: 10px; margin: 0px;">YOUR PROFILE</h2> -->
       </div>
-        <div class="shadow overflow">
-            <div id="header"></div>
-            <div id="profile">
-              <div class="image">
-              <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=1889&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+      <div class="shadow overflow">
+        <div id="header"></div>
+        <div id="profile">
+          <div class="image">
+            <!-- <img
+              src=""
+              alt="" /> -->
+              <img width="100" height="100" src="https://img.icons8.com/windows/100/FFFFFF/user.png" alt="user"/>
+          </div>
+          <div class="name">
+            <%= user.fullname %>
+          </div>
+          <div class="nickname">
+            @<%= user.username %>
+          </div>
+
+          <div class="location">
+              Kudla
               </div>
-              <div class="name">
-                <%= user.fullname %>
-              </div>
-              <div class="nickname">
-                @<%= user.username %>
-              </div>
-         
-              <!-- <div class="location">
-              <i class="material-icons">place</i>Kudla
-              </div> -->
-              <div class="bottom">
-              <!-- <span class="following">
-                <span class="count">170</span>
-                following
+          <div class="bottom">
+            <span class="following">
+                <span class="count">Email :</span>
+                mahi@gmail.com
                 </span>
                 <span class="followers">
-                  <span class="count">1M</span>
-                  followers
-                </span> -->
-    <a href="/logout"><button class="logout-btn">LOGOUT</button></a>
+                  <span class="count">Phone :</span>
+                  7548963274
+                </span>
+            <a href="/logout"><button class="logout-btn">LOGOUT</button></a>
 
-              </div>
-            </div>
           </div>
-        
+        </div>
+      </div>
+
     </div>
-      <script>
-        //Just scroll even if there isn't content that needs to be scrolled 🤗
+    <div class="booked-movie">
+      <!-- Inside the <div class="booked-movie"> -->
+<div class="ticket-details">
+  <h2>Booked Movie Ticket</h2>
 
-const header = document.getElementById("header");
+  <% if (user.bookedMovie) { %>
+    <div class="movie-info">
+      <div class="movie-title">
+        Movie: <%= user.bookedMovie.title %>
+      </div>
+      <div class="showtime">
+        Showtime: <%= user.bookedMovie.showtime %>
+      </div>
+      <!-- Add more details as needed -->
+    </div>
+  <% } else { %>
+    <p>No movie ticket booked.</p>
+  <% } %>
+</div>
 
-window.addEventListener("mousewheel", (event) => {
-  let delta = (event.wheelDelta + 3) * -1;
-  animate(delta > 0, delta);
-});
+    </div>
+    <script src="/javascripts/navbar.js"></script>
+    <%- include('../components/footer.ejs') %>
+    <script>
+      //Just scroll even if there isn't content that needs to be scrolled 🤗
 
-const animate = (check, delta) => {
-  const MIN_HEIGHT = 80;
-  const HEIGHT = 150;
-  const MAX_ZOOM = 3;
-  const MAX_BLUR = 3;
-  if (check) {
-    let blur =
-      1 + delta / 150 < MAX_BLUR ? Math.ceil(1 + delta / 150) : MAX_BLUR;
-    let height =
-      HEIGHT - delta / 10 > MIN_HEIGHT
-        ? Math.ceil(HEIGHT - delta / 10)
-        : MIN_HEIGHT;
-    let zoom = 1 + delta / 200 <= MAX_ZOOM ? 1 + delta / 200 : MAX_ZOOM;
-    requestAnimationFrame(transform(header, blur, height, zoom));
-  } else requestAnimationFrame(transform(header, 0, 150, 1));
-};
+      const header = document.getElementById("header");
 
-const transform = (element, blur, height, zoom) => {
-  element.style.filter = `blur(${blur}px)`;
-  element.style.height = `${height}px`;
-  element.style.transform = `scale(${zoom},${zoom})`;
-};
+      window.addEventListener("mousewheel", (event) => {
+        let delta = (event.wheelDelta + 3) * -1;
+        animate(delta > 0, delta);
+      });
 
-      </script>
+      const animate = (check, delta) => {
+        const MIN_HEIGHT = 80;
+        const HEIGHT = 150;
+        const MAX_ZOOM = 3;
+        const MAX_BLUR = 3;
+        if (check) {
+          let blur =
+            1 + delta / 150 < MAX_BLUR ? Math.ceil(1 + delta / 150) : MAX_BLUR;
+          let height =
+            HEIGHT - delta / 10 > MIN_HEIGHT
+              ? Math.ceil(HEIGHT - delta / 10)
+              : MIN_HEIGHT;
+          let zoom = 1 + delta / 200 <= MAX_ZOOM ? 1 + delta / 200 : MAX_ZOOM;
+          requestAnimationFrame(transform(header, blur, height, zoom));
+        } else requestAnimationFrame(transform(header, 0, 150, 1));
+      };
+
+      const transform = (element, blur, height, zoom) => {
+        element.style.filter = `blur(${blur}px)`;
+        element.style.height = `${height}px`;
+        element.style.transform = `scale(${zoom},${zoom})`;
+      };
+
+    </script>
 </body>
+
 </html>

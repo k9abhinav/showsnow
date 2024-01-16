@@ -24,7 +24,7 @@
   <div class="all">
     <%- include('../components/navbar.ejs') %>
     <div id="container">
-      <h1><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/ratings.png" alt="ratings"/> UPCOMING MOVIES</h1>
+      <h1><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/ratings.png" alt="ratings"/> Upcoming Movies</h1>
      
         <div class="main-movie"></div>
     </div>
@@ -72,7 +72,7 @@
       setTimeout(() => {
           // Remove the loading overlay
           document.getElementById("loading-overlay").style.display = "none";
-      }, 3000); // Adjust the timeout based on your actual loading time
+      }, 2000); // Adjust the timeout based on your actual loading time
   });
   
   </script>
@@ -83,12 +83,12 @@
     <script src="/javascripts/navbar.js"></script>
     <script src="/javascripts/homepage.js"></script>
     <script>
-      document.querySelector('#ftext button')
+      document.querySelector('#ftext')
     .addEventListener('mouseover', function () {
       let button = document.querySelector('#ftext button');
       gsap.to(button, {
         opacity: 0,
-        duration: 0.9,
+        duration: 0.1,
         ease: 'power4'
       });
 
@@ -102,12 +102,12 @@
       });
     });
 
-  document.querySelector('#ftext button')
+  document.querySelector('#ftext')
     .addEventListener('mouseleave', function () {
       let button = document.querySelector('#ftext button');
       gsap.to(button, {
         opacity: 1,
-        duration: 0.9,
+        duration: 0.1,
         ease: 'power4'
       });
 

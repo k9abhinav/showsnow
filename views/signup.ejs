@@ -2,52 +2,54 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGN UP</title>
-    
-    <!-- <link rel="stylesheet" href="/stylesheets/style.css"> -->
-    <link rel="stylesheet" href="/stylesheets/signin.css">
-    <script src="/javascripts/navbar.js"></script>
-    
-    <link rel="stylesheet" href="/stylesheets/navbar.css">
-    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGN UP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- <link rel="stylesheet" href="/stylesheets/style.css"> -->
+  <link rel="stylesheet" href="/stylesheets/signin.css">
+  <script src="/javascripts/navbar.js"></script>
+
+  <link rel="stylesheet" href="/stylesheets/navbar.css">
+  <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
 </head>
 
 <body>
-    <%- include('../components/navbar.ejs') %>
-     <div class="main-all">
-        <div class="container">
-            <div class="content-contenaire">
-              <div class="top-container">
-                <h1>SHOWS NOW</h1>
-                <!-- <img src="/images/copyshow.png"> -->
-                <h2> REGISTER WITH A NEW ACCOUNT </h2>
-                <p> Already a user? <a href="/login">Login!</a></p> 
-              </div>
-              <form action="/register" method="POST" class="animate-form">
-              <div class="input" >
-                <input type="text" placeholder= "Full Name" id="fullname" name="fullname" required>      
-                <input type="text" placeholder= "Username" id="username" name="username" required>
-                <input type="password"   placeholder="Password" id="password" name="password" required>
-                <input type="password" id="secret" name="secret" placeholder="Secret" required>
-              </div>
-              <input type="submit" value="REGISTER">     
-              </form> 
+  <%- include('../components/navbar.ejs') %>
+    <div class="main-all">
+      <div class="container">
+        <div class="content-contenaire">
+          <div class="top-container">
+            <h1>SHOWS NOW</h1>
+            <!-- <img src="/images/copyshow.png"> -->
+            <h2> REGISTER WITH A NEW ACCOUNT </h2>
+            <p> Already a user? <a href="/login">Login!</a></p>
+          </div>
+          <form action="/register" method="POST" class="animate-form">
+            <div class="input">
+              <input type="text" placeholder="Full Name" id="fullname" name="fullname" required>
+              <input type="text" placeholder="Username" id="username" name="username" required>
+              <input type="password" placeholder="Password" id="password" name="password" required>
+              <input type="password" id="secret" name="secret" placeholder="Secret" required>
             </div>
-            <div class="img-container" style="background-image: url('https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">  
-              <div class="toronto-logo">
-                <div class="toronto">
-                  <!-- <img src="/images/copyshow.png">       -->
-                </div>
-                <div class="welcome">
-                  <!-- <p>Book all your shows on SHOWS NOW!</p> -->
-                </div>
-              </div>
+            <input type="submit" value="REGISTER">
+          </form>
+        </div>
+        <div class="img-container"
+          style="background-image: url('https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+          <div class="toronto-logo">
+            <div class="toronto">
+              <!-- <img src="/images/copyshow.png">       -->
+            </div>
+            <div class="welcome">
+              <!-- <p>Book all your shows on SHOWS NOW!</p> -->
             </div>
           </div>
-     </div>
-     <script>
+        </div>
+      </div>
+    </div>
+    <script>
       // GSAP Animation
       gsap.to(".animate-form", {
         opacity: 1,

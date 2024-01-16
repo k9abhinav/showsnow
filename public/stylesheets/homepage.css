@@ -53,7 +53,7 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  opacity: 0.55;
+  opacity: 0.50;
 }
 
 @media screen and (max-width: 768px) {
@@ -63,7 +63,7 @@ body {
 }
 
   .nav {
-    background-color: #000;
+    /* background-color: #000; */
     padding: 1rem;
     text-align: center;
     color: red;
@@ -138,7 +138,7 @@ body {
 
 .footer {
   background-color: #111;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   text-align: center;
   color: #fff;
 }
@@ -195,8 +195,10 @@ body {
 
   .about {
     background-color: #222;
-    padding: 2rem;
+    padding: 2rem 1rem;
     color: #fff;
+    
+    border-radius: 12px;
   }
   
   .about-content {
@@ -296,7 +298,7 @@ body {
   }
   .swiper {
     width: 100%;
-    height: 60vh;
+    height: 70vh;
   }
   
   .swiper-slide {
@@ -321,8 +323,37 @@ body {
 .swipe-backimg{
   opacity: 0.75;
 }
-  
-  
+@media (max-width: 426px) {
+  .swiper{
+    height: 80vh;
+  }
+  #img1 {
+    content: url('/images/Jawan.jpg');
+  }
+
+  #img2 {
+    content: url('/images/fighter.jpg');
+  }
+
+  #img3 {
+    content: url('/images/tagaru.jpg');
+  }
+
+  #img4 {
+    content: url('/images/ghost.jpg');
+  }
+}
+  .swiper-button-next , .swiper-button-prev {
+    background-color: #22222261;
+    border-radius: 8px;
+    color: white !important;
+    padding: 1rem 0.3rem;
+  }
+ @media (max-width:426px) {
+  .swiper-button-next , .swiper-button-prev{
+    display: none !important;
+  }
+ }
  .contact-head{
     /* background-color: #333; */
     color: #fff;
@@ -374,18 +405,63 @@ body {
     }
   }
   
-
-  .swiper-button-get-started {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
+.movie-card-all{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 2s;
+}
+  /* Basic styling for the container */
+  .movie-card-container {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
   }
-  
-  .swiper-button-get-started a {
-    display: inline-block;
-    padding: 15px 30px;
+
+  /* Image as the background */
+  .movie-poster {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: filter 1s ease-in-out;
+    z-index: 2;
+  }
+
+  /* Video overlay with absolute positioning */
+  .movie-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  /* Styling for video element */
+  .movie-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* Styles for hover effect */
+  .movie-card-container:hover .movie-poster {
+    filter: blur(5px);
+    z-index: 0;
+  }
+  .post-video-btn {
+    display: flex;
+    padding: 10px ;
+    align-items: center;
+    justify-content: center;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
@@ -394,43 +470,10 @@ body {
     border: none;
     border-radius: 5px;
     color: #fff;
+    /* background-color: #3498db; */
     background-color: #3e2f5b;
+    /* background-color: #ffc857;  */
+  /* background-image: linear-gradient(316deg, #ffc857 0%, #3e2f5b 74%); */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.2s;
   }
-  
-  .swiper-button-get-started a:hover {
-    background-color: #15130d;
-  }
-  
-  .swiper-button-get-started a:active {
-    transform: scale(0.95);
-  }
-  .swiper-content {
-    position: absolute;
-    bottom: 40px;
-    left: 10px; /* Adjust the left value as needed */
-    z-index: 10;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    padding: 10px; /* Add some padding for better visibility */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .swiper-button-get-started {
-    margin-top: 10px;
-  }
-  
-  .large-button {
-    padding: 15px 25px;
-    font-size: 18px;
-  }
-  
-  .image-description {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-  

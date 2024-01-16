@@ -15,20 +15,16 @@ const userSchema = mongoose.Schema({
   
   fullname:{
     type: String,
-    required:true,
   },
   username:{
     type: String,
-    required:true,
     unique:true,
   },
   password:{
     type: String,
-    required:true,
      },
   secret:{
     type: String,
-    required:true,
   },
   // bookings: [{
   //   movieId: { type: Schema.Types.ObjectId, ref: 'Movie' },

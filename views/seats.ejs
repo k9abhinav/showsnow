@@ -7,11 +7,24 @@
     <title>Document</title>
     <link rel="stylesheet" href="/stylesheets/seats.css" />
   <link rel="stylesheet" href="/stylesheets/footer.css">
+  <link rel="stylesheet" href="/stylesheets/navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+<style>
+    .search{
+        display: none !important;
+    }
+</style>
 </head>
 
 <body>
+    <%- include('../components/navbar.ejs') %>
+
+    <!-- <header class="nav">
+        <div class="logo">SHOWS NOW</div>
+      </header> -->
     <div class="all">
+       
         <div class="movie-container">
             <label for="movie">Pick a movie:</label>
             <select name="movie" id="movie">
@@ -108,7 +121,7 @@
             You have selected <span id="count">0</span> seats for a price of &#8377;
             <span id="total">0</span>
         </p>
-        <button class="btn" onclick="redirect()">Book Tickets</button>
+        <button class="btn" onclick="redirect()">Confirm seats</button>
     </div>
     <script >
         function redirect(){
@@ -116,6 +129,7 @@
         }
     </script>
     <script src="/javascripts/seats.js"></script>
+    <script src="/javascripts/navbar.js"></script>
   <%- include('../components/footer.ejs') %>
 </body>
 

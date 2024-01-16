@@ -14,6 +14,7 @@ html {
     flex-direction: column;
     align-items: center;
     padding: 2rem 0rem;
+    color: #000;
 }
 /* Reset some default button styles */
 button {
@@ -45,12 +46,11 @@ button {
 }
 
 .profile-container {
-    min-height: 100vh;
+    min-height: 80vh;
     min-width: 100vw;
     background: linear-gradient(to right bottom,
             rgba(blue, 0.5),
             rgba(green, 0.5));
-    background-image: url("https://images.unsplash.com/photo-1501975558162-0be7b8ca95ea?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
     /* background-position: center center; */
     display: flex;
@@ -65,9 +65,9 @@ button {
     max-width: 400px;
     min-width: 300px;
     height: 150px;
-    background: url('https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background: url('/images/groovy-abstract-composition.png');
     background-size: cover;
-    background-position: center center;
+    /* background-position: center center; */
     transition: all 0.08s linear;
 }
 
@@ -93,6 +93,7 @@ button {
         height: 80px;
         width: 80px;
         border-radius: 10px;
+        background-color: #000;
 
         img {
             width: inherit;
@@ -207,7 +208,7 @@ a {
     display: flex;
     align-items: center;
     gap: 0.2rem;
-    font-family: 'Style Script', cursive;
+
     letter-spacing: 5px;
 }
 
@@ -349,3 +350,33 @@ a {
 .search{
     display: none;
 }
+.ticket-details {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .movie-info {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .movie-title,
+  .showtime {
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the "No movie ticket booked" message */
+  .ticket-details p {
+    font-size: 1rem;
+    color: #888;
+  }
+  

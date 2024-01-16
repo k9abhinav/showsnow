@@ -6,9 +6,9 @@ body {
   font-family: 'Ubuntu', sans-serif;
   box-sizing: border-box;
 }
-.all{
+/* .all{
   background-color: #111;
-}
+} */
 #loading-overlay {
   position: fixed;
   top: 0;
@@ -49,6 +49,17 @@ body {
 #container h1{
   text-align: center;
   padding:1rem 0rem ;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+}
+@media  (max-width:425px) {
+  #container h1{
+    font-size: 1.2rem;
+  }
+  
 }
 .main-movie {
   display: flex;
@@ -61,7 +72,8 @@ body {
   margin: 1rem;
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  background: #444; 
+  /* background: #444;  */
+  background-image: linear-gradient(316deg, #ffc857 0%, #3e2f5b 74%);
   position: relative;
   overflow: hidden;
 }
@@ -81,7 +93,7 @@ body {
 }
 
 .movie-info span {
-  background-color: lightsteelblue;
+  background-color: #111;
   padding: 0.25rem 0.5rem;
   border-radius: 3px;
   font-weight: bold;
@@ -104,7 +116,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color:#4c9173;
+  /* background-color:#fff; */
+  background-color: #3e2f5b;
   padding: 1rem;
   max-height: 100%;
   transform: translateY(101%);
@@ -114,12 +127,17 @@ body {
   scrollbar-width: thin; /* For Firefox */
   -ms-overflow-style: none; /* For IE and Edge */
 }
+.overview p{
+  color: inherit;
+}
 .overview h4{
-  color: rgb(0, 43, 129);
+  /* color: rgb(0, 43, 129); */
+  color: greenyellow;
 }
 .overview h3{
   padding: 10px 0px;
   font-size: larger;
+  color: inherit;
 }
 .movie:hover .overview {
   transform: translateY(0)
@@ -172,6 +190,12 @@ body {
   
  
 }
+.swiper-button-next , .swiper-button-prev {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  color: black !important;
+  padding: 1rem 0.3rem;
+}
 
 .swiper-content img {
   width: 100%;
@@ -185,15 +209,27 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+  padding: 1rem 4rem;
   height: max-content;
-  background: #555;
-  color: whitesmoke;
+  /* background: #f5f5f5; */
+  color: #000;
   border-radius: 8px;
 }
-
+@media (max-width:426px) {
+  .swiper-button-next , .swiper-button-prev{
+    display: none !important;
+  }
+  .swiper-content{
+    padding: 0rem 0rem;
+  }
+  
+}
 .swiper-head{
   text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 .details-swiper{
   height: max-content;
@@ -221,8 +257,9 @@ body {
   color: red;
 }
 .know-more-swiper{
-  background-color:#7dd87d;
-  color: black;
+  background-color: #3e2f5b;
+  color: #fff;
+  font-family: inherit;
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
