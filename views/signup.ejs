@@ -10,9 +10,13 @@
   <!-- <link rel="stylesheet" href="/stylesheets/style.css"> -->
   <link rel="stylesheet" href="/stylesheets/signin.css">
   <script src="/javascripts/navbar.js"></script>
-
   <link rel="stylesheet" href="/stylesheets/navbar.css">
   <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+  <style>
+    .search{
+    display: none !important;
+  }
+  </style>
 </head>
 
 <body>
@@ -49,6 +53,8 @@
         </div>
       </div>
     </div>
+    <script src="/javascripts/navbar.js"></script>
+  <%- include('../components/footer.ejs') %>
     <script>
       // GSAP Animation
       gsap.to(".animate-form", {
