@@ -7,7 +7,7 @@
   - User authentication and real-time seat selection
   - Fetched movie data via The Movie Database API
   - Dynamic ticket cost calculation with secure payments through Razorpay
-- **Role:** Led the project as Team Leader
+
 
 ### Tech Stack
 In the SHOWS NOW Movie Ticket Booking System, we used a powerful and modern tech stack. For the backend, we chose **ExpressJS and NodeJS** to build the server-side application and handle all the backend logic. This combination provided us with a robust framework for developing a scalable and efficient web application. We used **MongoDB** as our database to store user information, movie details, and booking data efficiently. On the frontend, we utilized **EJS** as our templating engine to dynamically render HTML content, while **CSS** was employed to style the web pages, ensuring they were visually appealing and user-friendly. To fetch up-to-date movie data, we integrated the **The Movie Database (TMDb) API**, which provided titles, descriptions, ratings, and images. For secure payment processing, we implemented **Razorpay**, which ensured safe and seamless transactions for ticket purchases.
